@@ -19,6 +19,9 @@ Route::get('/', function () {
 Route::get('kader/dashboard', function () {
     return view('admin.dashboard');
 });
+Route::get('kader/kalender', function () {
+    return view('admin.kalender');
+});
 
 Route::middleware([
     'auth:sanctum',
