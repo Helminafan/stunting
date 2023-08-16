@@ -22,27 +22,27 @@
         <label class="block tracking-wide text-gray-700 text-xs font-bold mb-2">
             Nama Bayi
         </label>
-        <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded-md py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" id="grid-first-name" type="text" placeholder="Nama Lengkap">
+        <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-500 rounded-md py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" id="grid-first-name" type="text" placeholder="Nama Lengkap">
         <label class="block tracking-wide text-gray-700 text-xs font-bold mb-2">
             Umur Bayi
         </label>
-        <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded-md py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" id="grid-first-name" type="number" placeholder="Umur">
+        <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-500 rounded-md py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" id="grid-first-name" type="number" placeholder="Umur">
         <label class="block tracking-wide text-gray-700 text-xs font-bold mb-2">
             Tanggal Lahir Bayi
         </label>
-        <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded-md py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" id="grid-first-name" type="date" placeholder="Tanggal">
+        <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-500 rounded-md py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" id="grid-first-name" type="date" placeholder="Tanggal">
         <label class="block tracking-wide text-gray-700 text-xs font-bold mb-2">
             Orangtua Bayi
         </label>
-        <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded-md py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" id="grid-first-name" type="text" placeholder="Nama Orangtua Bayi">
+        <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-500 rounded-md py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" id="grid-first-name" type="text" placeholder="Nama Orangtua Bayi">
         <label class="block tracking-wide text-gray-700 text-xs font-bold mb-2">
             Tinggi Badan
         </label>
-        <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded-md py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" id="grid-first-name" type="number" placeholder="Tinggi Badan Bayi">
+        <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-500 rounded-md py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" id="grid-first-name" type="number" placeholder="Tinggi Badan Bayi">
         <label class="block tracking-wide text-gray-700 text-xs font-bold mb-2">
             Berat Badan
         </label>
-        <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded-md py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" id="grid-first-name" type="number" placeholder="Berat Badan Bayi">
+        <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-500 rounded-md py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" id="grid-first-name" type="number" placeholder="Berat Badan Bayi">
         <button class="w-full bg-green-500 hover:bg-green-800 text-white font-semibold rounded-md rounded shadow py-2 px-4 mb-3">
             Tambah Data
         </button>

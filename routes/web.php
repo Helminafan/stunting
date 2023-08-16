@@ -29,6 +29,9 @@ Route::prefix('kader')->group(function(){
     Route::get('/tambahData', function () {
         return view('admin.tambahData');
     });
+    Route::get('/dataAnak', function () {
+        return view('admin.dataAnak');
+    });
 });
 
 Route::middleware([
