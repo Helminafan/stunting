@@ -16,11 +16,19 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('kader/dashboard', function () {
-    return view('admin.dashboard');
-});
-Route::get('kader/kalender', function () {
-    return view('admin.kalender');
+
+
+Route::prefix('kader')->group(function(){
+    //kader
+    Route::get('/dashboard', function () {
+        return view('admin.dashboard');
+    });
+    Route::get('/kalender', function () {
+        return view('admin.kalender');
+    });
+    Route::get('/tambahData', function () {
+        return view('admin.tambahData');
+    });
 });
 
 Route::middleware([
