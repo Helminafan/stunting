@@ -18,7 +18,7 @@ Route::get('/', function () {
 });
 
 
-Route::prefix('kader')->group(function(){
+Route::prefix('kader')->group(function () {
     //kader
     Route::get('/dashboard', function () {
         return view('admin.dashboard');
@@ -28,6 +28,14 @@ Route::prefix('kader')->group(function(){
     });
     Route::get('/tambahData', function () {
         return view('admin.tambahData');
+    });
+    Route::get('/dataAnak', function () {
+        return view('admin.dataAnak');
+    });
+});
+Route::prefix('user')->group(function () {
+    Route::get('/home', function () {
+        return view('user.home');
     });
 });
 
