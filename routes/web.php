@@ -32,6 +32,9 @@ Route::prefix('kader')->group(function(){
     Route::get('/dataAnak', function () {
         return view('admin.dataAnak');
     });
+    Route::get('/akun', function () {
+        return view('admin.akun');
+    });
 });
 
 Route::middleware([
