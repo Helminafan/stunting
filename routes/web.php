@@ -32,17 +32,15 @@ Route::prefix('kader')->group(function () {
     Route::get('/dataAnak', function () {
         return view('admin.dataAnak');
     });
+    Route::get('/akun', function () {
+        return view('admin.akun');
+    });
 });
 Route::prefix('user')->group(function () {
     Route::get('/home', function () {
         return view('user.home');
     });
-    Route::get('/dataAnak', function () {
-        return view('admin.dataAnak');
-    });
-    Route::get('/akun', function () {
-        return view('admin.akun');
-    });
+   
 });
 
 Route::middleware([
