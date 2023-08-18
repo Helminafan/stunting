@@ -40,7 +40,9 @@ Route::prefix('user')->group(function () {
     Route::get('/home', function () {
         return view('user.home');
     });
-   
+    Route::get('/bayi', function () {
+        return view('user.bayi');
+    });
 });
 
 Route::middleware([
