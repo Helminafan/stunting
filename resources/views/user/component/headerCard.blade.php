@@ -4,7 +4,8 @@
             <h1 class="font-medium text-lg">Hi' Lusi Andeeni</h1>
         </div>
         <div class="bg-red-500 bg-cover w-12 h-12 mr-2 rounded-[500px]"
-            style="background-image: url({{ asset('kader/foto/helmi.jpg') }});"></div>
+            style="background-image: url({{ asset('kader/foto/helmi.jpg') }});">
+        </div>
     </div>
 
     <div class="bg-white rounded-3xl shadow-xl absolute -bottom-5 w-[300px] left-1/2 -translate-x-1/2">
