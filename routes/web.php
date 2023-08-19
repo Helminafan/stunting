@@ -43,6 +43,9 @@ Route::prefix('user')->group(function () {
     Route::get('/bayi', function () {
         return view('user.bayi');
     });
+    Route::get('/akun', function () {
+        return view('user.akun');
+    });
 });
 
 Route::middleware([

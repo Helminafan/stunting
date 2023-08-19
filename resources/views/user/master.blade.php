@@ -13,7 +13,7 @@
 </head>
 
 <body class="bg-green-200">
-    @include('user.component.headerCard')
+    
     @yield('user')
     @extends('user.component.navbar')
 </body>

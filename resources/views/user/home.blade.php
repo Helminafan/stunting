@@ -1,4 +1,5 @@
 @extends('user.master')
+@include('user.component.headerCard')
 @section('user')
     <div class="font-semibold mt-10 mb-4 mx-6">
         <h1>
