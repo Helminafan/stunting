@@ -13,9 +13,11 @@
 </head>
 
 <body class="bg-green-200">
-    
+
     @yield('user')
     @extends('user.component.navbar')
+    
+    @stack('js')
 </body>
 
 </html>

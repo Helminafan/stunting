@@ -46,6 +46,9 @@ Route::prefix('user')->group(function () {
     Route::get('/akun', function () {
         return view('user.akun');
     });
+    Route::get('/kalender', function () {
+        return view('user.calender');
+    });
 });
 
 Route::middleware([
