@@ -35,6 +35,7 @@ Route::prefix('kader')->group(function () {
     Route::get('/akun', function () {
         return view('admin.akun');
     });
+    
 });
 Route::prefix('user')->group(function () {
     Route::get('/home', function () {
@@ -48,6 +49,9 @@ Route::prefix('user')->group(function () {
     });
     Route::get('/kalender', function () {
         return view('user.calender');
+    });
+    Route::get('/dataPribadi', function () {
+        return view('user.dataKesehatanPribadi');
     });
 });
 
