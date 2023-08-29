@@ -50,8 +50,14 @@ Route::prefix('user')->group(function () {
     Route::get('/kalender', function () {
         return view('user.calender');
     });
-    Route::get('/dataPribadi', function () {
+    Route::get('/dataKesehatanPribadi', function () {
         return view('user.dataKesehatanPribadi');
+    });
+    Route::get('/dataPribadi', function () {
+        return view('user.dataPribadi');
+    });
+    Route::get('/gantiPassword', function () {
+        return view('user.gantiPassword');
     });
 });
 
