@@ -59,6 +59,12 @@ Route::prefix('user')->group(function () {
     Route::get('/gantiPassword', function () {
         return view('user.gantiPassword');
     });
+    Route::get('/editProfil', function () {
+        return view('user.editProfil');
+    });
+    Route::get('/dataBayi', function () {
+        return view('user.dataBayi');
+    });
 });
 
 Route::middleware([

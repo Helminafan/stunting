@@ -12,7 +12,7 @@
     @vite('resources/css/app.css')
 </head>
 
-<body class="">
+<body>
     <section>
         <div class="container">
             <div class="navbar mb-5">
