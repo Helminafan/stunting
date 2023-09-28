@@ -1,6 +1,6 @@
 @extends('admin.master')
 @section('master')
-    <div class="h-28 bg-green-500 rounded-b-[60px]">
+    <div class="h-28 bg-[#D981B4] rounded-b-[60px]">
         <div class="flex justify-between items-center mx-6 pt-4">
             <div class="text-white">
                 <h1 class="font-medium text-lg">Stunting</h1>
@@ -21,7 +21,7 @@
         <h2 class="font-medium px-5  text-slate-600 pb-4 text-xs">Jadwal Stunting akan dilaksanakan di tempat antah berantah pada jam 
             10.00 wib</h2>
     </div>
-    <div class="rounded-full w-14 h-14 flex fixed bottom-16 right-5 bg-green-600 text-[35px]">
+    <div class="rounded-full w-14 h-14 flex fixed bottom-16 right-5 bg-[#D981B4] text-[35px]">
         <div class="mx-auto text-white"> <i class="fa-solid fa-plus" ></i></div>
     </div>
 @endsection
