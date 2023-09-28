@@ -12,7 +12,7 @@
     @vite('resources/css/app.css')
 </head>
 
-<body class="bg-green-200">
+<body class="bg-green-200 ">
 
     @yield('user')
     @extends('user.component.navbar')
