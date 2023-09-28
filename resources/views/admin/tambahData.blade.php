@@ -1,6 +1,6 @@
 @extends('admin.master')
 @section('master')
-    <div class="h-28 bg-green-500 rounded-b-[60px]">
+    <div class="h-28 bg-[#D981B4] rounded-b-[60px]">
         <div class="flex justify-between items-center mx-6 pt-4">
             <div class="text-white">
                 <h1 class="font-medium text-lg">Stunting</h1>
@@ -46,7 +46,7 @@
             Berat Badan
         </label>
         <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded-md py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" id="grid-first-name" type="number" placeholder="Berat Badan Bayi">
-        <button class="w-full bg-green-500 hover:bg-green-800 text-white font-semibold rounded-md rounded  shadow py-2 px-4 mb-10">
+        <button class="w-full bg-[#D981B4] hover:bg-[#C35294] text-white font-semibold rounded-md rounded  shadow py-2 px-4 mb-10">
             Tambah Data
         </button>
     </div>
