@@ -12,12 +12,13 @@
     @vite('resources/css/app.css')
 </head>
 
-<body class="bg-green-200 ">
+<body class=" bg-[#F2F2F2]">
 
     @yield('user')
     @extends('user.component.navbar')
     
     @stack('js')
+    
 </body>
 
 </html>

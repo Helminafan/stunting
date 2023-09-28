@@ -1,6 +1,6 @@
 @extends('user.master')
 @section('user')
-    <div class="h-28 bg-[#1de030] top-0 w-full absolute rounded-b-[60px]"></div>
+    <div class="h-28 bg-[#D981B4] top-0 w-full absolute rounded-b-[60px]"></div>
     <div class="calendar relative">
         <div class="month mb-4 bg-white mt-5 rounded-xl py-1 flex items-center justify-between mx-6 ">
             <button class="w-3 prev px-4">
@@ -62,7 +62,7 @@
         <hr class="border-black mb-5">
         <div class="detail mx-6">
             <div class="card mb-5">
-                <div class="header rounded-t-lg bg-green-600 text-white text-center">
+                <div class="header rounded-t-lg bg-[#D981B4] text-white text-center">
                     <h1>Detail jadwal</h1>
                 </div>
                 <div class="bg-white py-2 rounded-b-lg">
@@ -93,8 +93,8 @@
                     </div>
                 </div>
             </div>
-            <div class="card">
-                <div class="header rounded-t-lg bg-green-600 text-white text-center">
+            <div class="card mb-32">
+                <div class="header rounded-t-lg bg-[#D981B4] text-white text-center">
                     <h1>Status Kehadiran</h1>
                 </div>
                 <div class="bg-white py-3 rounded-b-lg">

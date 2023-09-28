@@ -1,7 +1,7 @@
 @extends('user.master')
 
 @section('user')
-    <div class="h-28 bg-[#1de030] rounded-b-[60px] relative">
+    <div class="h-36 bg-[#D981B4] rounded-b-[60px] relative">
         <div class="flex justify-between items-center mx-6 pt-4">
             <div class="text-white">
                 <h1 class="font-medium text-lg">Stunting</h1>
@@ -22,7 +22,7 @@
         </div>
     </div>
     
-    <div class="bg-[#1de030] mb-5 mt-10 mx-6 rounded-xl">
+    <div class="bg-[#D981B4] mb-5 mt-20 mx-6 rounded-xl">
         <div class="flex items-center py-2 justify-between border-b-2 text-white px-6">
             <i class="fa-regular fa-circle-user w-7 "></i>
             <h1 class="grow">Akun saya</h1>
