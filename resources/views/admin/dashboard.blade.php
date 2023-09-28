@@ -1,6 +1,6 @@
 @extends('admin.master')
 @section('master')
-    <div class="h-28 bg-green-500 rounded-b-[60px] relative">
+    <div class="h-28 bg-[#D981B4] rounded-b-[60px] relative">
         <div class="flex justify-between items-center mx-6 pt-4">
             <div class="text-white">
                 <h1 class="font-medium text-lg">Stunting</h1>
@@ -25,17 +25,18 @@
         <hr class="border-gray-500 ">
     </div>
     <div class="grid grid-cols-2 gap-2 mb-5 mx-6 justify-between">
-        <div class="bg-white  p-4 rounded-xl">
+        <div class="bg-white  p-4 rounded-xl shadow-xl">
             <h1 class="text-[14px]">Jumlah Anak</h1>
             <div class="flex">
                 <h1 class="text-[30px]">203</h1>
                 <img src="{{ asset('kader/foto/bayi.png') }}" alt="">
             </div>
         </div>
-        <div class="bg-white p-4 rounded-xl">
+        <div class="bg-white p-4 rounded-xl shadow-2xl">
             <h1 class="text-[14px]">Jumlah Stunting</h1>
             <div class="flex">
                 <h1 class="text-[30px]">203</h1>
+                <img src="{{ asset('kader/foto/bayi.png') }}" alt="">
             </div>
         </div>
     </div>

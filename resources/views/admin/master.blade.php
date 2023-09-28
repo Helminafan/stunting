@@ -13,7 +13,7 @@
 
 </head>
 
-<body class="bg-slate-300">
+<body class="bg-white">
     <section>
 
        
