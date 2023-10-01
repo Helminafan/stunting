@@ -1,63 +1,3 @@
-{{-- <x-guest-layout>
-    <x-authentication-card>
-        <x-slot name="logo">
-            <x-authentication-card-logo />
-        </x-slot>
-
-        <x-validation-errors class="mb-4" />
-
-        <form method="POST" action="{{ route('register') }}">
-            @csrf
-
-            <div>
-                <x-label for="name" value="{{ __('Name') }}" />
-                <x-input id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name')" required autofocus autocomplete="name" />
-            </div>
-
-            <div class="mt-4">
-                <x-label for="email" value="{{ __('Email') }}" />
-                <x-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autocomplete="username" />
-            </div>
-
-            <div class="mt-4">
-                <x-label for="password" value="{{ __('Password') }}" />
-                <x-input id="password" class="block mt-1 w-full" type="password" name="password" required autocomplete="new-password" />
-            </div>
-
-            <div class="mt-4">
-                <x-label for="password_confirmation" value="{{ __('Confirm Password') }}" />
-                <x-input id="password_confirmation" class="block mt-1 w-full" type="password" name="password_confirmation" required autocomplete="new-password" />
-            </div>
-
-            @if (Laravel\Jetstream\Jetstream::hasTermsAndPrivacyPolicyFeature())
-                <div class="mt-4">
-                    <x-label for="terms">
-                        <div class="flex items-center">
-                            <x-checkbox name="terms" id="terms" required />
-
-                            <div class="ml-2">
-                                {!! __('I agree to the :terms_of_service and :privacy_policy', [
-                                        'terms_of_service' => '<a target="_blank" href="'.route('terms.show').'" class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">'.__('Terms of Service').'</a>',
-                                        'privacy_policy' => '<a target="_blank" href="'.route('policy.show').'" class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">'.__('Privacy Policy').'</a>',
-                                ]) !!}
-                            </div>
-                        </div>
-                    </x-label>
-                </div>
-            @endif
-
-            <div class="flex items-center justify-end mt-4">
-                <a class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" href="{{ route('login') }}">
-                    {{ __('Already registered?') }}
-                </a>
-
-                <x-button class="ml-4">
-                    {{ __('Register') }}
-                </x-button>
-            </div>
-        </form>
-    </x-authentication-card>
-</x-guest-layout> --}}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -138,7 +78,25 @@
     .input-field input:is(:focus, :valid) ~ i{
        color: #D981B4;
     }
-    .form .button{
+    .submit-btn{
+        width: 100%; 
+        height: 150%;
+        margin-top: 35px;
+        border:none;
+        color: #fff;
+        font-size: 1rem;
+        font-weight: 600;
+        letter-spacing: 1px;
+        border-radius: 6px;
+        background-color: #D981B4;
+        cursor: pointer;
+        display: inline-block;
+        transition: all 0.3s ease;
+    }
+    .submit-btn:hover{
+        background-color: #ED50AB;
+    }
+    /* .form .button{
         margin-top: 35px;
     }
     .form .button input{
@@ -154,7 +112,7 @@
     }
     .button ipnut:hover{
         background-color: #ED50AB;
-    }
+    } */
     .form .login-signup{
         margin-top: 30px;
         text-align: center;
@@ -166,24 +124,18 @@
             <div class="form login">
                 <span class="title">Daftar</span>
                 <form action="*" method="post">
-                    <div class="input-field">
-                        <input type="text" placeholder="Nama" required>
-                        <i class="uil uil-user-square"></i>
-                       </div>
                    <div class="input-field">
                     <input type="email" placeholder="Email" required>
                     <i class="uil uil-at"></i>
                    </div>
-
-                   {{-- <div class="input-field">
+                   <div class="input-field">
                     <input type="number" placeholder="Nomor Telepon" required>
                     <i class="uil uil-phone"></i>
                    </div>
                    <div class="input-field">
                     <input type="text" placeholder="Alamat" required>
                     <i class="uil uil-sign-alt"></i>
-                   </div> --}}
-
+                   </div>
                    <div class="input-field">
                     <input type="password" placeholder="Password" required>
                     <i class="uil uil-padlock icon"></i>
@@ -192,12 +144,10 @@
                     <input type="password" placeholder="Konfirmasi Password" required>
                     <i class="uil uil-padlock icon"></i>
                    </div>
-                   <div class="input-field button">
-                    <input type="button" value="Daftar">
-                   </div>
+                   <button class="submit-btn" type="submit"></button>
                 </form>
                 <div class="login-signup">
-                    <span class="text">Sudah punya akun? <a href="{{ __('login') }}" class="text -signup-text">Masuk</a></span>
+                    <span class="text">Sudah punya akun? <a href="#" class="text -signup-text">Masuk</a></span>
                 </div>
             </div>
         </div>
