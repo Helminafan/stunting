@@ -1,0 +1,21 @@
+.calendar .days .event {
+    position: relative;
+    
+}
+.calendar .days .event::after {
+    content: '';
+    position: absolute;
+    border-radius: 100%;
+    width: 20%;
+    top: -20%;
+    left: 50%;
+    height: 6px;
+    background-color: blue;
+    transform: translateX(-50%);
+}
+.calendar .day:hover {
+    background-color: rgb(189, 189, 189);
+}
+.calendar .day .active {
+    background-color: rgb(189, 189, 189);
+}

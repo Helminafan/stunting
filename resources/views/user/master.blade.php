@@ -10,6 +10,7 @@
         integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     @vite('resources/css/app.css')
+    <link rel="stylesheet" href="{{asset('kader/css/style.css')}}">
 </head>
 
 <body class=" bg-[#F2F2F2]">

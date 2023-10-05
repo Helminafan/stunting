@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\KalenderController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -23,9 +24,7 @@ Route::prefix('kader')->group(function () {
     Route::get('/dashboard', function () {
         return view('admin.dashboard');
     });
-    Route::get('/kalender', function () {
-        return view('admin.kalender');
-    });
+    Route::get('/kalender', [KalenderController::class, 'index'])->name('kalender');
     Route::get('/tambahData', function () {
         return view('admin.tambahData');
     });
@@ -35,6 +34,9 @@ Route::prefix('kader')->group(function () {
     Route::get('/akun', function () {
         return view('admin.akun');
     });
+    Route::get('/tambahJadwal', [KalenderController::class,'create'])->name('tambahKalender');
+    Route::post('/storeJadwal', [KalenderController::class,'store'])->name('storeKalender');
+    Route::get('/getKalender',[KalenderController::class,'getKalender']);
     
 });
 Route::prefix('user')->group(function () {

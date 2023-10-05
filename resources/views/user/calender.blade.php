@@ -21,7 +21,7 @@
                 <div class="text-[12px]">Jumat</div>
                 <div class="text-[12px]">Sabtu</div>
             </div>
-            <div class="grid grid-cols-7 gap-2 mx-3 text-center mt-2 days">
+            <div class="grid grid-cols-7 gap-2 mx-3 text-center mt-2 days ">
                 {{-- <div class="text-[12px]">30</div>
                 <div class="text-[12px]">1</div>
                 <div class="text-[12px]">2</div>
@@ -62,11 +62,12 @@
         <hr class="border-black mb-5">
         <div class="detail mx-6">
             <div class="card mb-5">
-                <div class="header rounded-t-lg bg-[#D981B4] text-white text-center">
-                    <h1>Detail jadwal</h1>
+                <div class="bg-[#D981B4] flex text-white  rounded-t-lg items-center justify-center">
+                    <div class="event-day text-center mr-2"></div>
+                    <div class="event-date text-center"></div>
                 </div>
-                <div class="bg-white py-2 rounded-b-lg">
-                    <div class="row mx-4 flex text-[12px]">
+                <div class="events bg-white py-2 rounded-b-lg">
+                    {{-- <div class="row mx-4 flex text-[12px]">
                         <p class="w-20">Kegiatan</p>
                         <p class="w-2">:</p>
                         <p>Penimbangan & Imunisasi</p>
@@ -90,7 +91,7 @@
                         <p class="w-20">Alamat</p>
                         <p class="w-2">:</p>
                         <p>Dusun Sumberwangi RT 01 RW 20 Desa Wonosobo</p>
-                    </div>
+                    </div> --}}
                 </div>
             </div>
             <div class="card mb-32">
