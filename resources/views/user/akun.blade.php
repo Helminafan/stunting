@@ -22,29 +22,29 @@
         </div>
     </div>
     
-    <div class="bg-[#D981B4] mb-5 mt-20 mx-6 rounded-xl">
-        <div class="flex items-center py-2 justify-between border-b-2 text-white px-6">
-            <i class="fa-regular fa-circle-user w-7 "></i>
+    <div class="bg-white mb-5 mt-20 mx-6 rounded-xl">
+        <div class="flex items-center py-2 justify-between border-b-2 text-[#D981B4] px-6">
+            <i class="fa-solid fa-circle-user w-7"></i>
             <h1 class="grow">Akun saya</h1>
             <i class="fa-solid fa-chevron-right"></i>
         </div>
-        <div class="flex items-center py-2 justify-between border-b-2 text-white px-6">
-            <i class="fa-regular fa-circle-user w-7 "></i>
+        <div class="flex items-center py-2 justify-between border-b-2 text-[#D981B4] px-6">
+            <i class="fa-solid fa-file w-7"></i>
             <h1 class="grow">Detail Pribadi</h1>
             <i class="fa-solid fa-chevron-right"></i>
         </div>
-        <div class="flex items-center py-2 justify-between border-b-2 text-white px-6">
-            <i class="fa-regular fa-circle-user w-7 "></i>
+        <div class="flex items-center py-2 justify-between border-b-2 text-[#D981B4] px-6">
+            <i class="fa-solid fa-notes-medical w-7"></i>
             <h1 class="grow">Data Kesehahatan Orang Tua</h1>
             <i class="fa-solid fa-chevron-right"></i>
         </div>
-        <div class="flex items-center py-2 justify-between border-b-2 text-white px-6">
-            <i class="fa-regular fa-circle-user w-7 "></i>
+        <div class="flex items-center py-2 justify-between border-b-2 text-[#D981B4] px-6">
+            <i class="fa-solid fa-bell w-7"></i>
             <h1 class="grow">Notifikasi</h1>
             <i class="fa-solid fa-chevron-right"></i>
         </div>
-        <div class="flex items-center py-2 justify-between border-b-2 text-white px-6">
-            <i class="fa-regular fa-circle-user w-7 "></i>
+        <div class="flex items-center py-2 justify-between border-b-2 text-[#D981B4] px-6">
+            <i class="fa-solid fa-unlock-keyhole w-7"></i>
             <h1 class="grow">Ketentuan & Privasi</h1>
             <i class="fa-solid fa-chevron-right"></i>
         </div>
