@@ -138,7 +138,25 @@
     .input-field input:is(:focus, :valid) ~ i{
        color: #D981B4;
     }
-    .form .button{
+    .submit-btn{
+        width: 100%; 
+        height: 150%;
+        margin-top: 35px;
+        border:none;
+        color: #fff;
+        font-size: 1rem;
+        font-weight: 600;
+        letter-spacing: 1px;
+        border-radius: 6px;
+        background-color: #D981B4;
+        cursor: pointer;
+        display: inline-block;
+        transition: all 0.3s ease;
+    }
+    .submit-btn:hover{
+        background-color: #ED50AB;
+    }
+    /* .form .button{
         margin-top: 35px;
     }
     .form .button input{
@@ -151,7 +169,7 @@
         background-color: #D981B4;
         cursor: pointer;
         transition: all 0.3s ease;
-    }
+    } */
     .button ipnut:hover{
         background-color: #ED50AB;
     }
@@ -165,13 +183,14 @@
         <div class="forms">
             <div class="form login">
                 <span class="title">Daftar</span>
-                <form action="*" method="post">
+                <form action="{{ route('register') }}" method="POST">
+                    @csrf
                     <div class="input-field">
-                        <input type="text" placeholder="Nama" required>
+                        <input type="text" placeholder="Nama" name="name" required>
                         <i class="uil uil-user-square"></i>
                        </div>
                    <div class="input-field">
-                    <input type="email" placeholder="Email" required>
+                    <input type="email" placeholder="Email" name="email" required>
                     <i class="uil uil-at"></i>
                    </div>
 
@@ -185,16 +204,16 @@
                    </div> --}}
 
                    <div class="input-field">
-                    <input type="password" placeholder="Password" required>
+                    <input type="password" placeholder="Password" name="password" required>
                     <i class="uil uil-padlock icon"></i>
                    </div>
                    <div class="input-field">
-                    <input type="password" placeholder="Konfirmasi Password" required>
+                    <input type="password" placeholder="Konfirmasi Password" name="password_confirmation" required>
                     <i class="uil uil-padlock icon"></i>
                    </div>
-                   <div class="input-field button">
-                    <input type="button" value="Daftar">
-                   </div>
+                   <button type="submit" class="submit-btn">
+                    Daftar
+                    </button>
                 </form>
                 <div class="login-signup">
                     <span class="text">Sudah punya akun? <a href="{{ __('login') }}" class="text -signup-text">Masuk</a></span>
