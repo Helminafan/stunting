@@ -67,6 +67,9 @@ Route::prefix('user')->group(function () {
     Route::get('/dataBayi', function () {
         return view('user.dataBayi');
     });
+    Route::get('/akunsaya', function () {
+        return view('user.akunSaya');
+    });
 });
 
 Route::middleware([
