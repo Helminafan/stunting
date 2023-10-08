@@ -30,6 +30,10 @@
                     </a>
                 </div>
             </div>
+            <div>
+                <Iframe src="{{ asset('kader/foto/FrameKK.jpg') }}" width="100%" height="900px"></Iframe>
+            </div>
+         </div>
         </div>
     </section>
     <script src="{{asset('user/tab-content.js')}}"></script>
