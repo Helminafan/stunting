@@ -76,6 +76,9 @@ Route::prefix('user')->group(function () {
     Route::get('/kepriv', function () {
         return view('user.kepriv');
     });
+    Route::get('/tentang', function () {
+        return view('user.tentangapp');
+    });
 });
 
 Route::middleware([
