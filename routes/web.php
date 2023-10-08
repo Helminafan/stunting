@@ -70,6 +70,12 @@ Route::prefix('user')->group(function () {
     Route::get('/akunsaya', function () {
         return view('user.akunSaya');
     });
+    Route::get('/notif', function () {
+        return view('user.notifikasiView');
+    });
+    Route::get('/kepriv', function () {
+        return view('user.kepriv');
+    });
 });
 
 Route::middleware([
