@@ -22,7 +22,9 @@
         <div class="container">
             <div class="navbar mb-5">
                 <div class="bg-[#D981B4] items-center px-4 py-3 text-white flex">
-                    <i class="fa-solid fa-left-long mx-3"></i>
+                    <a href="{{ url('/user/akun') }}">
+                        <i class="fa-solid fa-left-long mx-3"></i>
+                    </a>
                     <a href="{{ url('/user/akun') }}">
                         <h1 class="font-semibold">Back</h1>
                     </a>

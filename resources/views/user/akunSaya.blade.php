@@ -6,13 +6,28 @@
     <div class="container">
         <div class="navbar mb-5">
             <div class="bg-[#D981B4] items-center px-4 py-3 text-white flex">
-                <i class="fa-solid fa-left-long mx-3"></i>
+                <a href="{{ url('/user/akun') }}">
+                    <i class="fa-solid fa-left-long mx-3"></i>
+                </a>
                 <a href="{{ url('/user/akun') }}">
                     <h1 class="font-semibold">Kembali</h1>
                 </a>
             </div>
         </div>
-        <div class="relative card bg-[#D981B4] mt-4 py-5 rounded-xl mx-8">
+        
+        <div class="flex flex-col items-center pb-10">
+            <img class="w-24 h-24 mb-3 mt-4 p-1 rounded-full ring-2 ring-[#D981B4] dark:ring-[#D981B4]" src="{{ asset('kader/foto/helmi.jpg') }}" alt="#"/>
+                <div class="flex mt-1 space-x-1 text-[#D981B4]">
+                    <a href="#">
+                        <h1 class="font-semibold">Ubah Gambar</h1>
+                    </a>
+                    <a href="#">
+                        <i class="fa-solid fa-pen-to-square"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="relative card bg-[#D981B4] mt-1 py-5 rounded-xl mx-8">
                 <div class="mb-3 mx-3">
                     <label for="default-input"
                         class="block mb-2 text-sm font-medium text-white">Nama Lengkap</label>

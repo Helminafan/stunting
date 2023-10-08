@@ -6,9 +6,6 @@
             <div class="text-white">
                 <h1 class="font-medium text-lg">Stunting</h1>
             </div>
-            <div class="text-white">
-                <i class="fa-solid fa-bell"></i>
-            </div>
         </div>
         <div class="bg-white rounded-3xl shadow-xl absolute -bottom-7 w-[250px] left-1/2 -translate-x-1/2">
             <div class="flex items-center px-5 py-3">
@@ -47,7 +44,7 @@
             </div>
         </a>
 
-        <a href="#">
+        <a href="{{ url('/user/notif') }}">
             <div class="flex items-center py-2 justify-between border-b-2 text-[#D981B4] px-6">
                 <i class="fa-solid fa-bell w-7"></i>
                 <h1 class="grow">Notifikasi</h1>
@@ -56,6 +53,14 @@
         </a>
 
         <a href="#">
+            <div class="flex items-center py-2 justify-between border-b-2 text-[#D981B4] px-6">
+                <i class="fa-solid fa-circle-info w-7"></i>
+                <h1 class="grow">Tentang</h1>
+                <i class="fa-solid fa-chevron-right"></i>
+            </div>
+        </a>
+
+        <a href="{{ url('/user/kepriv') }}">
             <div class="flex items-center py-2 justify-between border-b-2 text-[#D981B4] px-6">
                 <i class="fa-solid fa-unlock-keyhole w-7"></i>
                 <h1 class="grow">Ketentuan & Privasi</h1>
