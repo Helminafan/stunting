@@ -34,6 +34,15 @@ Route::prefix('kader')->group(function () {
     Route::get('/akun', function () {
         return view('admin.akun');
     });
+    Route::get('/akunkader', function () {
+        return view('admin.akunKader');
+    });
+    Route::get('/kepriv', function () {
+        return view('admin.kepriv');
+    });
+    Route::get('/tentang', function () {
+        return view('admin.tentang');
+    });
     Route::get('/tambahJadwal', [KalenderController::class,'create'])->name('tambahKalender');
     Route::post('/storeJadwal', [KalenderController::class,'store'])->name('storeKalender');
     Route::get('/getKalender',[KalenderController::class,'getKalender']);
@@ -78,6 +87,12 @@ Route::prefix('user')->group(function () {
     });
     Route::get('/tentang', function () {
         return view('user.tentangapp');
+    });
+    Route::get('/akunsaya/editprofil', function () {
+        return view('user.editprofil');
+    });
+    Route::get('/akunsaya/gantipass', function () {
+        return view('user.gantipassword');
     });
 });
 
