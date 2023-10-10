@@ -49,7 +49,10 @@
         </div>
       </div>
     </div>
-    <button class="rounded-full w-14 h-14 flex fixed bottom-16 right-5 bg-green-600 text-[35px]">
-        <div class="mx-auto text-white"> <i class="fa-solid fa-plus" ></i></div>
-    </button>
+    <a href="{{ url('/kader/tambahData') }}">
+        <button class="rounded-full w-14 h-14 flex fixed bottom-16 right-5 bg-[#D981B4] text-[35px]">
+            <div class="mx-auto text-white"> <i class="fa-solid fa-plus" ></i></div>
+        </button>
+    </a>
+
 @endsection
