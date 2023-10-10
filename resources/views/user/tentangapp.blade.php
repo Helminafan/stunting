@@ -39,7 +39,7 @@
                 </div> 
                 <div class="grid gap-8 lg:gap-16 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
                     <div class="text-center text-gray-500 dark:text-gray-400">
-                        <img class="mx-auto mb-4 w-36 h-36 rounded-full" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/bonnie-green.png" alt="Bonnie Avatar">
+                        <img class="mx-auto mb-4 w-36 h-36 rounded-full" src="{{ asset('kader/foto/aji.jpeg') }}" alt=" Avatar">
                         <h3 class="mb-1 text-2xl font-bold tracking-tight text-gray-900 dark:text-gray-900">
                             <a href="#">M. Aji Hermansya</a>
                         </h3>
@@ -47,16 +47,16 @@
                         <ul class="flex justify-center mt-4 space-x-4">
                             <li>
                                 <a href="#" class="text-[#39569c] hover:text-gray-900 dark:hover:text-gray-900">
-                                    <i class="fa-solid fa-square-envelope fa-xl"></i>
+                                    <i class="fa-solid fa-square-envelope fa-xl text-gray-300 hover:text-gray-900"></i>
                                 </a>
                             </li>
                             <li>
                                 <a href="#" class="text-[#00acee] hover:text-gray-900 dark:hover:text-gray-900">
-                                    <i class="fa-brands fa-square-instagram fa-xl"></i>
+                                    <i class="fa-brands fa-square-instagram fa-xl text-gray-300 hover:text-gray-900"></i>
                                 </a>
                             </li>
                             <li>
-                                <a href="#" class="text-gray-900 hover:text-gray-900 dark:hover:text-gray-900 dark:text-gray-300">
+                                <a href="https://github.com/ajihermansya" class="text-gray-900 hover:text-gray-900 dark:hover:text-gray-900 dark:text-gray-300">
                                     <i class="fa-brands fa-square-github fa-xl"></i>
                                 </a>
                             </li>
@@ -68,7 +68,7 @@
                         </ul>
                     </div>
                     <div class="text-center text-gray-500 dark:text-gray-400">
-                        <img class="mx-auto mb-4 w-36 h-36 rounded-full" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/helene-engels.png" alt="Helene Avatar">
+                        <img class="mx-auto mb-4 w-36 h-36 rounded-full" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/helene-engels.png" alt=" Avatar">
                         <h3 class="mb-1 text-2xl font-bold tracking-tight text-gray-900 dark:text-gray-900">
                             <a href="#">Xavier Is'ad Ariel</a>
                         </h3>
@@ -76,16 +76,16 @@
                         <ul class="flex justify-center mt-4 space-x-4">
                             <li>
                                 <a href="#" class="text-[#39569c] hover:text-gray-900 dark:hover:text-gray-900">
-                                    <i class="fa-solid fa-square-envelope fa-xl"></i>
+                                    <i class="fa-solid fa-square-envelope fa-xl text-gray-300 hover:text-gray-900"></i>
                                 </a>
                             </li>
                             <li>
                                 <a href="#" class="text-[#00acee] hover:text-gray-900 dark:hover:text-gray-900">
-                                    <i class="fa-brands fa-square-instagram fa-xl"></i>
+                                    <i class="fa-brands fa-square-instagram fa-xl text-gray-300 hover:text-gray-900"></i>
                                 </a>
                             </li>
                             <li>
-                                <a href="#" class="text-gray-900 hover:text-gray-900 dark:hover:text-gray-900 dark:text-gray-300">
+                                <a href="https://github.com/Xaisar" class="text-gray-900 hover:text-gray-900 dark:hover:text-gray-900 dark:text-gray-300">
                                     <i class="fa-brands fa-square-github fa-xl"></i>
                                 </a>
                             </li>
@@ -98,7 +98,7 @@
                         </ul>
                     </div>
                     <div class="text-center text-gray-500 dark:text-gray-400">
-                        <img class="mx-auto mb-4 w-36 h-36 rounded-full" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/jese-leos.png" alt="Jese Avatar">
+                        <img class="mx-auto mb-4 w-36 h-36 rounded-full" src="{{ asset('kader/foto/helmi.jpg') }}" alt="Jese Avatar">
                         <h3 class="mb-1 text-2xl font-bold tracking-tight text-gray-900 dark:text-gray-900">
                             <a href="#">Helmi Nafan Ananda</a>
                         </h3>
@@ -106,16 +106,16 @@
                         <ul class="flex justify-center mt-4 space-x-4">
                             <li>
                                 <a href="#" class="text-[#39569c] hover:text-gray-900 dark:hover:text-gray-900">
-                                    <i class="fa-solid fa-square-envelope fa-xl"></i>
+                                    <i class="fa-solid fa-square-envelope fa-xl text-gray-300 hover:text-gray-900"></i>
                                 </a>
                             </li>
                             <li>
                                 <a href="#" class="text-[#00acee] hover:text-gray-900 dark:hover:text-gray-900">
-                                    <i class="fa-brands fa-square-instagram fa-xl"></i>
+                                    <i class="fa-brands fa-square-instagram fa-xl text-gray-300 hover:text-gray-900"></i>
                                 </a>
                             </li>
                             <li>
-                                <a href="#" class="text-gray-900 hover:text-gray-900 dark:hover:text-gray-900 dark:text-gray-300">
+                                <a href="https://github.com/Helminafan" class="text-gray-900 hover:text-gray-900 dark:hover:text-gray-900 dark:text-gray-300">
                                     <i class="fa-brands fa-square-github fa-xl"></i>
                                 </a>
                             </li>
@@ -128,7 +128,7 @@
                         </ul>
                     </div>
                     <div class="text-center text-gray-500 dark:text-gray-400">
-                        <img class="mx-auto mb-4 w-36 h-36 rounded-full" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/joseph-mcfall.png" alt="Joseph Avatar">
+                        <img class="mx-auto mb-4 w-36 h-36 rounded-full" src="{{ asset('kader/foto/ajril.JPG') }}" alt="Joseph Avatar">
                         <h3 class="mb-1 text-2xl font-bold tracking-tight text-gray-900 dark:text-gray-900">
                             <a href="#">Azril Praya Prasetyo</a>
                         </h3>
@@ -136,16 +136,11 @@
                         <ul class="flex justify-center mt-4 space-x-4">
                             <li>
                                 <a href="#" class="text-[#39569c] hover:text-gray-900 dark:hover:text-gray-900">
-                                    <i class="fa-solid fa-square-envelope fa-xl"></i>
+                                    <i class="fa-solid fa-square-envelope fa-xl text-gray-300 hover:text-gray-900"></i>
                                 </a>
                             </li>
                             <li>
-                                <a href="#" class="text-[#00acee] hover:text-gray-900 dark:hover:text-gray-900">
-                                    <i class="fa-brands fa-square-instagram fa-xl"></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" class="text-gray-900 hover:text-gray-900 dark:hover:text-gray-900 dark:text-gray-300">
+                                <a href="https://github.com/ajil23" class="text-gray-900 hover:text-gray-900 dark:hover:text-gray-900 dark:text-gray-300">
                                     <i class="fa-brands fa-square-github fa-xl"></i>
                                 </a>
                             </li>
@@ -158,7 +153,7 @@
                         </ul>
                     </div>
                     <div class="text-center text-gray-500 dark:text-gray-400">
-                        <img class="mx-auto mb-4 w-36 h-36 rounded-full" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/sofia-mcguire.png" alt="Sofia Avatar">
+                        <img class="mx-auto mb-4 w-36 h-36 rounded-full" src="{{ asset('kader/foto/virgi.jpg') }}" alt=" Avatar">
                         <h3 class="mb-1 text-2xl font-bold tracking-tight text-gray-900 dark:text-gray-900">
                             <a href="#">Virgianita Ramadhani Susilo Putri</a>
                         </h3>
@@ -166,46 +161,46 @@
                         <ul class="flex justify-center mt-4 space-x-4">
                             <li>
                                 <a href="#" class="text-[#39569c] hover:text-gray-900 dark:hover:text-gray-900">
-                                    <i class="fa-solid fa-square-envelope fa-xl"></i>
+                                    <i class="fa-solid fa-square-envelope fa-xl text-gray-300 hover:text-gray-900"></i>
                                 </a>
                             </li>
                             <li>
                                 <a href="#" class="text-[#00acee] hover:text-gray-900 dark:hover:text-gray-900">
-                                    <i class="fa-brands fa-square-instagram fa-xl"></i>
+                                    <i class="fa-brands fa-square-instagram fa-xl text-gray-300 hover:text-gray-900"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://github.com/virgian12" class="text-gray-900 hover:text-gray-900 dark:hover:text-gray-900 dark:text-gray-300">
+                                    <i class="fa-brands fa-square-github fa-xl text-gray-300 hover:text-gray-900"></i>
                                 </a>
                             </li>
                             <li>
                                 <a href="#" class="text-gray-900 hover:text-gray-900 dark:hover:text-gray-900 dark:text-gray-300">
-                                    <i class="fa-brands fa-square-github fa-xl"></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" class="text-gray-900 hover:text-gray-900 dark:hover:text-gray-900 dark:text-gray-300">
-                                    <i class="fa-brands fa-linkedin fa-xl"></i>
+                                    <i class="fa-brands fa-linkedin fa-xl text-gray-300 hover:text-gray-900"></i>
                                 </a>
                             </li>
                         </ul>
                         </ul>
                     </div>
                     <div class="text-center text-gray-500 dark:text-gray-400">
-                        <img class="mx-auto mb-4 w-36 h-36 rounded-full" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/thomas-lean.png" alt="Leslie Avatar">
+                        <img class="mx-auto mb-4 w-36 h-36 rounded-full" src="{{ asset('kader/foto/diah.jpeg') }}" alt=" Avatar">
                         <h3 class="mb-1 text-2xl font-bold tracking-tight text-gray-900 dark:text-gray-900">
-                            <a href="#">Diahrita Nurholifah</a>
+                            <a href="#">Diah Rita Nurholifah</a>
                         </h3>
                         <p>UI/UX Designer</p>
                         <ul class="flex justify-center mt-4 space-x-4">
                             <li>
                                 <a href="#" class="text-[#39569c] hover:text-gray-900 dark:hover:text-gray-900">
-                                    <i class="fa-solid fa-square-envelope fa-xl"></i>
+                                    <i class="fa-solid fa-square-envelope fa-xl text-gray-300 hover:text-gray-900"></i>
                                 </a>
                             </li>
                             <li>
                                 <a href="#" class="text-[#00acee] hover:text-gray-900 dark:hover:text-gray-900">
-                                    <i class="fa-brands fa-square-instagram fa-xl"></i>
+                                    <i class="fa-brands fa-square-instagram fa-xl text-gray-300 hover:text-gray-900"></i>
                                 </a>
                             </li>
                             <li>
-                                <a href="#" class="text-gray-900 hover:text-gray-900 dark:hover:text-gray-900 dark:text-gray-300">
+                                <a href="https://github.com/diahrita" class="text-gray-900 hover:text-gray-900 dark:hover:text-gray-900 dark:text-gray-300">
                                     <i class="fa-brands fa-square-github fa-xl"></i>
                                 </a>
                             </li>
