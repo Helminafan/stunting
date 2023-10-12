@@ -135,8 +135,8 @@
                         <p>Web Developer</p>
                         <ul class="flex justify-center mt-4 space-x-4">
                             <li>
-                                <a href="#" class="text-[#39569c] hover:text-gray-900 dark:hover:text-gray-900">
-                                    <i class="fa-solid fa-square-envelope fa-xl text-gray-300 hover:text-gray-900"></i>
+                                <a href="https://www.instagram.com/_prasetyoazril/" class="text-[#00acee] hover:text-gray-900 dark:hover:text-gray-900">
+                                    <i class="fa-brands fa-square-instagram fa-xl text-gray-300 hover:text-gray-900"></i>
                                 </a>
                             </li>
                             <li>
@@ -145,7 +145,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="#" class="text-gray-900 hover:text-gray-900 dark:hover:text-gray-900 dark:text-gray-300">
+                                <a href="https://www.linkedin.com/in/azril-prasetyo/" class="text-gray-900 hover:text-gray-900 dark:hover:text-gray-900 dark:text-gray-300">
                                     <i class="fa-brands fa-linkedin fa-xl"></i>
                                 </a>
                             </li>
