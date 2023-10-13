@@ -6,9 +6,6 @@
             <div class="text-white">
                 <h1 class="font-medium text-lg">Stunting</h1>
             </div>
-            <div class="text-white">
-                <i class="fa-solid fa-bell"></i>
-            </div>
         </div>
         <div class="bg-white rounded-3xl shadow-xl absolute -bottom-7 w-[250px] left-1/2 -translate-x-1/2">
             <div class="flex items-center px-5 py-3">
@@ -23,33 +20,56 @@
     </div>
     
     <div class="bg-white mb-5 mt-20 mx-6 rounded-xl">
-        <div class="flex items-center py-2 justify-between border-b-2 text-[#D981B4] px-6">
-            <i class="fa-solid fa-circle-user w-7"></i>
-            <h1 class="grow">Akun saya</h1>
-            <i class="fa-solid fa-chevron-right"></i>
-        </div>
-        <div class="flex items-center py-2 justify-between border-b-2 text-[#D981B4] px-6">
-            <i class="fa-solid fa-file w-7"></i>
-            <h1 class="grow">Detail Pribadi</h1>
-            <i class="fa-solid fa-chevron-right"></i>
-        </div>
-        <div class="flex items-center py-2 justify-between border-b-2 text-[#D981B4] px-6">
-            <i class="fa-solid fa-notes-medical w-7"></i>
-            <h1 class="grow">Data Kesehahatan Orang Tua</h1>
-            <i class="fa-solid fa-chevron-right"></i>
-        </div>
-        <div class="flex items-center py-2 justify-between border-b-2 text-[#D981B4] px-6">
-            <i class="fa-solid fa-bell w-7"></i>
-            <h1 class="grow">Notifikasi</h1>
-            <i class="fa-solid fa-chevron-right"></i>
-        </div>
-        <div class="flex items-center py-2 justify-between border-b-2 text-[#D981B4] px-6">
-            <i class="fa-solid fa-unlock-keyhole w-7"></i>
-            <h1 class="grow">Ketentuan & Privasi</h1>
-            <i class="fa-solid fa-chevron-right"></i>
-        </div>
+        <a href="{{ url('/user/akunsaya') }}">
+            <div class="flex items-center py-2 justify-between border-b-2 text-[#D981B4] px-6">
+                <i class="fa-solid fa-circle-user w-7"></i>
+                <h1 class="grow">Akun saya</h1>
+                <i class="fa-solid fa-chevron-right"></i>
+            </div>
+        </a>
+
+        <a href="{{ url('/user/dataPribadi') }}">
+            <div class="flex items-center py-2 justify-between border-b-2 text-[#D981B4] px-6">
+                <i class="fa-solid fa-file w-7"></i>
+                <h1 class="grow">Data Orangtua</h1>
+                <i class="fa-solid fa-chevron-right"></i>
+            </div>
+        </a>
+        
+        <a href="{{ url('/user/dataKesehatanPribadi') }}">
+            <div class="flex items-center py-2 justify-between border-b-2 text-[#D981B4] px-6">
+                <i class="fa-solid fa-notes-medical w-7"></i>
+                <h1 class="grow">Data Kesehahatan Orang Tua</h1>
+                <i class="fa-solid fa-chevron-right"></i>
+            </div>
+        </a>
+
+        <a href="{{ url('/user/notif') }}">
+            <div class="flex items-center py-2 justify-between border-b-2 text-[#D981B4] px-6">
+                <i class="fa-solid fa-bell w-7"></i>
+                <h1 class="grow">Notifikasi</h1>
+                <i class="fa-solid fa-chevron-right"></i>
+            </div>
+        </a>
+
+        <a href="{{ url('/user/kepriv') }}">
+            <div class="flex items-center py-2 justify-between border-b-2 text-[#D981B4] px-6">
+                <i class="fa-solid fa-unlock-keyhole w-7"></i>
+                <h1 class="grow">Ketentuan & Privasi</h1>
+                <i class="fa-solid fa-chevron-right"></i>
+            </div>
+        </a>
+        
+        <a href="{{ url('/user/tentang') }}">
+            <div class="flex items-center py-2 justify-between border-b-2 text-[#D981B4] px-6">
+                <i class="fa-solid fa-circle-info w-7"></i>
+                <h1 class="grow">Tentang</h1>
+                <i class="fa-solid fa-chevron-right"></i>
+            </div>
+        </a>
+
     </div>
-    <div class="bg-red-500 mx-5 text-center rounded-xl py-2 text-white">
+    <div class="bg-[#865BF4] mx-5 text-center rounded-xl py-2 text-white">
         <h1 class="mx-auto ">log out</h1>
     </div>
 @endsection

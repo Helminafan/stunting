@@ -22,28 +22,40 @@
 </div>
 
 <div class="bg-white mb-5 mt-20 mx-6 rounded-xl">
-    <div class="flex items-center py-2 justify-between border-b-2 text-[#D981B4] px-6">
-        <i class="fa-solid fa-user-nurse w-7"></i>
-        <h1 class="grow">Akun saya</h1>
-        <i class="fa-solid fa-chevron-right"></i>
-    </div>
-    <div class="flex items-center py-2 justify-between border-b-2 text-[#D981B4] px-6">
-        <i class="fa-solid fa-file-medical w-7"></i>
-        <h1 class="grow">Dokumen Posyandu</h1>
-        <i class="fa-solid fa-chevron-right"></i>
-    </div>
-    <div class="flex items-center py-2 justify-between border-b-2 text-[#D981B4] px-6">
-        <i class="fa-solid fa-circle-info w-7"></i>
-        <h1 class="grow">Tentang</h1>
-        <i class="fa-solid fa-chevron-right"></i>
-    </div>
-    <div class="flex items-center py-2 justify-between border-b-2 text-[#D981B4] px-6">
-        <i class="fa-solid fa-key w-7"></i>
-        <h1 class="grow">Ketentuan & Privasi</h1>
-        <i class="fa-solid fa-chevron-right"></i>
-    </div>
+    <a href="{{ url('/kader/akunkader') }}">
+        <div class="flex items-center py-2 justify-between border-b-2 text-[#D981B4] px-6">
+            <i class="fa-solid fa-user-nurse w-7"></i>
+            <h1 class="grow">Akun saya</h1>
+            <i class="fa-solid fa-chevron-right"></i>
+        </div>
+    </a>
+   
+    <a href="">
+        <div class="flex items-center py-2 justify-between border-b-2 text-[#D981B4] px-6">
+            <i class="fa-solid fa-file-medical w-7"></i>
+            <h1 class="grow">Dokumen Posyandu</h1>
+            <i class="fa-solid fa-chevron-right"></i>
+        </div>
+    </a>
+
+    <a href="{{ url('/kader/tentang') }}">
+        <div class="flex items-center py-2 justify-between border-b-2 text-[#D981B4] px-6">
+            <i class="fa-solid fa-circle-info w-7"></i>
+            <h1 class="grow">Tentang</h1>
+            <i class="fa-solid fa-chevron-right"></i>
+        </div>
+    </a>
+
+    <a href="{{ url('/kader/kepriv') }}">
+        <div class="flex items-center py-2 justify-between border-b-2 text-[#D981B4] px-6">
+            <i class="fa-solid fa-key w-7"></i>
+            <h1 class="grow">Ketentuan & Privasi</h1>
+            <i class="fa-solid fa-chevron-right"></i>
+        </div>
+    </a>
+
 </div>
-<div class="bg-red-500 mx-5 text-center rounded-xl py-2 text-white">
+<div class="bg-[#865BF4] mx-5 text-center rounded-xl py-2 text-white">
     <h1 class="mx-auto ">log out</h1>
 </div>
 @endsection

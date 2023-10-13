@@ -62,6 +62,24 @@ Route::group(['prefix' => 'user', 'middleware' => [
     Route::get('/dataBayi', function () {
         return view('user.dataBayi');
     });
+    Route::get('/akunsaya', function () {
+        return view('user.akunSaya');
+    });
+    Route::get('/notif', function () {
+        return view('user.notifikasiView');
+    });
+    Route::get('/kepriv', function () {
+        return view('user.kepriv');
+    });
+    Route::get('/tentang', function () {
+        return view('user.tentangapp');
+    });
+    Route::get('/akunsaya/editprofil', function () {
+        return view('user.editprofil');
+    });
+    Route::get('/akunsaya/gantipass', function () {
+        return view('user.gantipassword');
+    });
 });
 
 Route::group(['prefix' => 'kader', 'middleware' => [
