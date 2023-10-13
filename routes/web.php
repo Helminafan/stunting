@@ -1,7 +1,11 @@
 <?php
 
+use App\Http\Controllers\AuthController;
 use App\Http\Controllers\KalenderController;
+use App\Http\Controllers\OrangTuaController;
+use App\Http\Controllers\RoleController;
 use Illuminate\Support\Facades\Route;
+use Laravel\Jetstream\Rules\Role;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,32 +21,26 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
-
-
-Route::prefix('kader')->group(function () {
-    //kader
-    Route::get('/dashboard', function () {
-        return view('admin.dashboard');
-    });
-    Route::get('/kalender', [KalenderController::class, 'index'])->name('kalender');
-    Route::get('/tambahData', function () {
-        return view('admin.tambahData');
-    });
-    Route::get('/dataAnak', function () {
-        return view('admin.dataAnak');
-    });
-    Route::get('/akun', function () {
-        return view('admin.akun');
-    });
-    Route::get('/tambahJadwal', [KalenderController::class,'create'])->name('tambahKalender');
-    Route::post('/storeJadwal', [KalenderController::class,'store'])->name('storeKalender');
-    Route::get('/getKalender',[KalenderController::class,'getKalender']);
-    
+Route::middleware(['AyahAccess', 'auth:sanctum', config('jetstream.auth_session', 'verified')])->group(function () {
+    Route::get('dataAyah', [OrangTuaController::class, 'create_ayah'])->name('create_ayah');
+    Route::post('/storeAyah', [OrangTuaController::class, 'storeAyah'])->name('storeAyah');
 });
-Route::prefix('user')->group(function () {
+Route::middleware(['OneTimeAccess', 'auth:sanctum', config('jetstream.auth_session', 'verified')])->group(function () {
+    Route::get('/dataIbu', [OrangTuaController::class, 'create_ibu'])->name('create_ibu');
+    Route::post('/storeIbu', [OrangTuaController::class, 'storeIbu'])->name('storeIbu');
+});
+
+Route::group(['prefix' => 'user', 'middleware' => [
+    'AyahAccess',
+    'OneTimeAccess',
+    'EnsureProfileCompleted',
+    'auth:sanctum',
+    config('jetstream.auth_session'),
+    'verified',
+]], function () {
     Route::get('/home', function () {
         return view('user.home');
-    });
+    })->name('user.home');
     Route::get('/bayi', function () {
         return view('user.bayi');
     });
@@ -55,9 +53,6 @@ Route::prefix('user')->group(function () {
     Route::get('/dataKesehatanPribadi', function () {
         return view('user.dataKesehatanPribadi');
     });
-    Route::get('/dataPribadi', function () {
-        return view('user.dataPribadi');
-    });
     Route::get('/gantiPassword', function () {
         return view('user.gantiPassword');
     });
@@ -69,12 +64,34 @@ Route::prefix('user')->group(function () {
     });
 });
 
+Route::group(['prefix' => 'kader', 'middleware' => [
+    'auth:sanctum',
+    config('jetstream.auth_session'),
+    'verified',
+]], function () {
+    Route::get('/dashboard', function () {
+        return view('admin.dashboard');
+    })->name('admin.dashboard');
+    Route::get('/kalender', [KalenderController::class, 'index'])->name('kalender');
+    Route::get('/tambahData', function () {
+        return view('admin.tambahData');
+    });
+    Route::get('/dataAnak', function () {
+        return view('admin.dataAnak');
+    });
+    Route::get('/akun', function () {
+        return view('admin.akun');
+    });
+    Route::get('/tambahJadwal', [KalenderController::class, 'create'])->name('tambahKalender');
+    Route::post('/storeJadwal', [KalenderController::class, 'store'])->name('storeKalender');
+    Route::get('/getKalender', [KalenderController::class, 'getKalender']);
+});
+
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),
     'verified',
 ])->group(function () {
-    Route::get('/dashboard', function () {
-        return view('dashboard');
-    })->name('dashboard');
+    Route::get('/dashboard', [RoleController::class, 'redirectUser'])->name('dashboard');
 });
+Route::get('/auth/logout', [AuthController::class, 'logout'])->name('admin.logout')->middleware('auth');

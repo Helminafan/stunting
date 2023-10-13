@@ -44,42 +44,42 @@
                     <h1 class="font-bold text-center mb-3">Kesehatan Pribadi</h1>
                     <div class="mb-3 mx-3">
                         <label for="default-input"
-                            class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Tinggi</label>
+                            class="block mb-2 text-sm font-medium text-gray-900">Tinggi</label>
                         <div class="flex items-center">
                             <input type="text" id="default-input"
-                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
                             <h1>cm</h1>
                         </div>
     
                     </div>
                     <div class="mb-3 mx-3">
                         <label for="default-input"
-                            class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Berat Badan</label>
+                            class="block mb-2 text-sm font-medium text-gray-900">Berat Badan</label>
                         <div class="flex items-center">
                             <input type="text" id="default-input"
-                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
                             <h1>kg</h1>
                         </div>
     
                     </div>
                     <div class="mb-3 mx-3">
                         <label for="default-input"
-                            class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Apakah Anda
+                            class="block mb-2 text-sm font-medium text-gray-900">Apakah Anda
                             Merokok?</label>
                         <input type="text" id="default-input"
-                            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
     
     
                     </div>
                     <div class="mb-3 mx-3">
                         <label for="default-input"
-                            class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Riwayat Penyakit</label>
+                            class="block mb-2 text-sm font-medium text-gray-900">Riwayat Penyakit</label>
                         <input type="text" id="default-input"
-                            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
                     </div>
                     <div class=" mx-3">
                         <button type="button"
-                            class=" w-full text-white bg-green-700 hover:bg-green-800 focus:outline-none focus:ring-4 focus:ring-green-300 font-medium rounded-full text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">Simpan</button>
+                            class=" w-full text-white bg-green-700 hover:bg-green-800 focus:outline-none focus:ring-4 focus:ring-green-300 font-medium rounded-full text-sm px-5 py-2.5 text-center mr-2 mb-2">Simpan</button>
                     </div>
     
                 </div>
@@ -87,42 +87,42 @@
                     <h1 class="font-bold text-center mb-3">Kesehatan Pasangan</h1>
                     <div class="mb-3 mx-3">
                         <label for="default-input"
-                            class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Tinggi</label>
+                            class="block mb-2 text-sm font-medium text-gray-900">Tinggi</label>
                         <div class="flex items-center">
                             <input type="text" id="default-input"
-                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
                             <h1>cm</h1>
                         </div>
     
                     </div>
                     <div class="mb-3 mx-3">
                         <label for="default-input"
-                            class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Berat Badan</label>
+                            class="block mb-2 text-sm font-medium text-gray-900">Berat Badan</label>
                         <div class="flex items-center">
                             <input type="text" id="default-input"
-                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
                             <h1>kg</h1>
                         </div>
     
                     </div>
                     <div class="mb-3 mx-3">
                         <label for="default-input"
-                            class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Apakah Anda
+                            class="block mb-2 text-sm font-medium text-gray-900">Apakah Anda
                             Merokok?</label>
                         <input type="text" id="default-input"
-                            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
     
     
                     </div>
                     <div class="mb-3 mx-3">
                         <label for="default-input"
-                            class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Riwayat Penyakit</label>
+                            class="block mb-2 text-sm font-medium text-gray-900">Riwayat Penyakit</label>
                         <input type="text" id="default-input"
-                            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
                     </div>
                     <div class=" mx-3">
                         <button type="button"
-                            class=" w-full text-white bg-green-700 hover:bg-green-800 focus:outline-none focus:ring-4 focus:ring-green-300 font-medium rounded-full text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">Simpan</button>
+                            class=" w-full text-white bg-green-700 hover:bg-green-800 focus:outline-none focus:ring-4 focus:ring-green-300 font-medium rounded-full text-sm px-5 py-2.5 text-center mr-2 mb-2">Simpan</button>
                     </div>
     
                 </div>

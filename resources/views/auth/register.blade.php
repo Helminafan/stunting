@@ -60,6 +60,7 @@
 </x-guest-layout> --}}
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -68,34 +69,40 @@
 </head>
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
-    *{
+
+    * {
         margin: 0;
         padding: 0;
         box-sizing: border-box;
-        font-family: 'Poppins'; 
+        font-family: 'Poppins';
     }
-    .backg-gradient{
+
+    .backg-gradient {
         background: linear-gradient(90deg, #D981B4, #865BF4);
         height: 100vh;
         display: flex;
         align-items: center;
         justify-content: center;
     }
-    .container{
+
+    .container {
         position: relative;
         max-width: 330px;
         width: 100%;
         background: #ffff;
         border-radius: 10px;
     }
-    .container .forms{
+
+    .container .forms {
         padding: 30px;
     }
-    .container .form .title{
+
+    .container .form .title {
         position: relative;
         font-size: 27px;
         font-weight: 600;
     }
+
     .form .title::before {
         content: '';
         position: absolute;
@@ -106,27 +113,31 @@
         background-color: #D981B4;
         border-radius: 25px;
     }
-    .form .input-field{
+
+    .form .input-field {
         position: relative;
         height: 50px;
         width: 100%;
         margin-top: 30px;
     }
-    .input-field input{
-       position: absolute;
-       height: 100%;
-       width: 100%; 
-       padding: 0 35px;
-       border: none;
-       outline: none;
-       font-size: 16px;
-       border-bottom: 2px solid #ccc;
-       border-top: 2px solid transparent;
+
+    .input-field input {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        padding: 0 35px;
+        border: none;
+        outline: none;
+        font-size: 16px;
+        border-bottom: 2px solid #ccc;
+        border-top: 2px solid transparent;
     }
-    .input-field input:is(:focus, :valid){
+
+    .input-field input:is(:focus, :valid) {
         border-bottom-color: #D981B4;
     }
-    .input-field i{
+
+    .input-field i {
         position: absolute;
         top: 50%;
         left: 0;
@@ -135,14 +146,16 @@
         font-size: 23px;
         transition: all 0.2s ease;
     }
-    .input-field input:is(:focus, :valid) ~ i{
-       color: #D981B4;
+
+    .input-field input:is(:focus, :valid)~i {
+        color: #D981B4;
     }
-    .submit-btn{
-        width: 100%; 
+
+    .submit-btn {
+        width: 100%;
         height: 150%;
         margin-top: 35px;
-        border:none;
+        border: none;
         color: #fff;
         font-size: 1rem;
         font-weight: 600;
@@ -153,9 +166,11 @@
         display: inline-block;
         transition: all 0.3s ease;
     }
-    .submit-btn:hover{
+
+    .submit-btn:hover {
         background-color: #ED50AB;
     }
+
     /* .form .button{
         margin-top: 35px;
     }
@@ -170,14 +185,16 @@
         cursor: pointer;
         transition: all 0.3s ease;
     } */
-    .button ipnut:hover{
+    .button ipnut:hover {
         background-color: #ED50AB;
     }
-    .form .login-signup{
+
+    .form .login-signup {
         margin-top: 30px;
         text-align: center;
     }
 </style>
+
 <body class="backg-gradient">
     <div class="container">
         <div class="forms">
@@ -185,42 +202,45 @@
                 <span class="title">Daftar</span>
                 <form action="{{ route('register') }}" method="POST">
                     @csrf
-                    <div class="input-field">
+                    {{-- <div class="input-field">
                         <input type="text" placeholder="Nama" name="name" required>
                         <i class="uil uil-user-square"></i>
-                       </div>
-                   <div class="input-field">
-                    <input type="email" placeholder="Email" name="email" required>
-                    <i class="uil uil-at"></i>
-                   </div>
+                    </div> --}}
+                    <div class="input-field">
+                        <input type="email" placeholder="Email" name="email" required>
+                        <i class="uil uil-at"></i>
+                    </div>
 
-                   {{-- <div class="input-field">
-                    <input type="number" placeholder="Nomor Telepon" required>
-                    <i class="uil uil-phone"></i>
-                   </div>
-                   <div class="input-field">
-                    <input type="text" placeholder="Alamat" required>
+                    <div class="input-field">
+                        <input type="number" placeholder="Nomor Telepon" name="telp" required>
+                        <i class="uil uil-phone"></i>
+                    </div>
+
+                    <div class="input-field">
+                    <input type="text" placeholder="Alamat" name="address" required>
                     <i class="uil uil-sign-alt"></i>
-                   </div> --}}
+                   </div> 
 
-                   <div class="input-field">
-                    <input type="password" placeholder="Password" name="password" required>
-                    <i class="uil uil-padlock icon"></i>
-                   </div>
-                   <div class="input-field">
-                    <input type="password" placeholder="Konfirmasi Password" name="password_confirmation" required>
-                    <i class="uil uil-padlock icon"></i>
-                   </div>
-                   <button type="submit" class="submit-btn">
-                    Daftar
+                    <div class="input-field">
+                        <input type="password" placeholder="Password" name="password" required>
+                        <i class="uil uil-padlock icon"></i>
+                    </div>
+                    <div class="input-field">
+                        <input type="password" placeholder="Konfirmasi Password" name="password_confirmation" required>
+                        <i class="uil uil-padlock icon"></i>
+                    </div>
+                    <button type="submit" class="submit-btn">
+                        Daftar
                     </button>
                 </form>
                 <div class="login-signup">
-                    <span class="text">Sudah punya akun? <a href="{{ __('login') }}" class="text -signup-text">Masuk</a></span>
+                    <span class="text">Sudah punya akun? <a href="{{ __('login') }}"
+                            class="text -signup-text">Masuk</a></span>
                 </div>
             </div>
         </div>
     </div>
-</div>
+    </div>
 </body>
+
 </html>

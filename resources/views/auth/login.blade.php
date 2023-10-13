@@ -157,8 +157,8 @@
                 <form method="POST" action="{{ route('login') }}">
                     @csrf
                    <div class="input-field">
-                    <input type="email" id="email" name="email" placeholder="Email" required>
-                    <i class="uil uil-at"></i>
+                    <input type="tel" id="telp" name="telp" placeholder="telp" required>
+                    <i class="uil uil-phone"></i>
                    </div>
                    <div class="input-field">
                     <input type="password" id="password" name="password" placeholder="Password" required>

@@ -12,7 +12,7 @@
                 <div class="text-[11px]">Kalender</div>
             </div>
         </a>
-        <a href="{{ url('/kader/tambahData') }}">
+        <a href="{{ url('/kader/dataAnak') }}">
             <div class="text-center {{'kader/tambahData' == request()->path() ? 'text-[#D981B4]' : 'text-slate-600'}}">
                 <div><i class="fa-solid fa-baby"></i></div>
                 <div class="text-[11px]">Data Anak</div>
