@@ -31,8 +31,7 @@ Route::middleware(['OneTimeAccess', 'auth:sanctum', config('jetstream.auth_sessi
 });
 
 Route::group(['prefix' => 'user', 'middleware' => [
-    'AyahAccess',
-    'OneTimeAccess',
+    
     'EnsureProfileCompleted',
     'auth:sanctum',
     config('jetstream.auth_session'),
