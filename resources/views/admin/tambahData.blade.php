@@ -1,53 +1,78 @@
 @extends('admin.master')
 @section('master')
-    <div class="h-28 bg-[#D981B4] rounded-b-[60px]">
-        <div class="flex justify-between items-center mx-6 pt-4">
-            <div class="text-white">
-                <h1 class="font-medium text-lg">Stunting</h1>
-            </div>
-            <div class="text-white">
-                <i class="fa-solid fa-bell"></i>
-            </div>
+
+    {{-- back button --}}
+    <div class="navbar mb-5">
+        <div class="bg-[#D981B4] items-center px-4 py-3 text-white flex">
+            <a href="{{ url('/kader/dataAnak') }}">
+                <i class="fa-solid fa-left-long mx-3"></i>
+            </a>
+            <a href="{{ url('/kader/dataAnak') }}">
+                <h1 class="font-semibold">Back</h1>
+            </a>
         </div>
     </div>
-    <div class="bg-white rounded-lg w-80 mx-auto mb-5 overflow-hidden  mt-6">
-        <div id="tambahData"></div>
-    </div>
-    <div class="text-gray-600  mx-6 mb-5">
-        <h1>Data</h1>
-        <hr class="border-gray-500 ">
-    </div> 
-    {{-- form --}}
-    <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
-        <label class="block tracking-wide text-gray-700 text-xs font-bold mb-2">
-            Nama Bayi
-        </label>
-        <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-500 rounded-md py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" id="grid-first-name" type="text" placeholder="Nama Lengkap">
-        <label class="block tracking-wide text-gray-700 text-xs font-bold mb-2">
-            Umur Bayi
-        </label>
-        <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-500 rounded-md py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" id="grid-first-name" type="number" placeholder="Umur">
-        <label class="block tracking-wide text-gray-700 text-xs font-bold mb-2">
-            Tanggal Lahir Bayi
-        </label>
-        <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-500 rounded-md py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" id="grid-first-name" type="date" placeholder="Tanggal">
-        <label class="block tracking-wide text-gray-700 text-xs font-bold mb-2">
-            Orangtua Bayi
-        </label>
-        <select class="appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded-md py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" name="" id="">
-            <option value="">Pilih Orang Tua</option>
-            <option value="">Fulan</option>
-        </select>
-        <label class="block tracking-wide text-gray-700 text-xs font-bold mb-2">
-            Tinggi Badan
-        </label>
-        <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-500 rounded-md py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" id="grid-first-name" type="number" placeholder="Tinggi Badan Bayi">
-        <label class="block tracking-wide text-gray-700 text-xs font-bold mb-2">
-            Berat Badan
-        </label>
-        <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded-md py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" id="grid-first-name" type="number" placeholder="Berat Badan Bayi">
-        <button class="w-full bg-[#D981B4] hover:bg-[#C35294] text-white font-semibold rounded-md rounded  shadow py-2 px-4 mb-10">
-            Tambah Data
-        </button>
+
+    {{-- form of "tambah data bayi" --}}
+    <div class="relative card bg-[#D981B4] mt-4 py-5 rounded-xl mx-8">
+        <div role="tabpanel" id="panel-1" class="tab-panel ">
+            {{-- heading teks card --}}
+            <h1 class="font-bold text-center mb-3 text-white">Data Bayi</h1>
+
+            <form class="bayi" method="POST" action="{{ route('dataBayi.store') }}" enctype="multipart/form-data">
+                @csrf
+                {{-- input for "nama bayi" type text --}}
+                <div class="mb-3 mx-3">
+                    <label for="default-input"
+                        class="block mb-2 text-sm font-medium text-white">Nama Bayi</label>
+                    <div class="flex items-center">
+                        <input type="text" id="default-input"
+                            class="bg-white border border-white text-white text-sm rounded-lg focus:ring-[#865BF4] focus:border-[#865BF4] block w-full p-2.5 dark:bg-white dark:border-white dark:text-black dark:focus:ring-[#865BF4] dark:focus:border-[#865BF4]" placeholder="Nama Bayi" name="namaBayi" required>
+                    </div>
+                </div>
+    
+                {{-- input for "tanggal lahir" type date --}}
+                <div class="mb-3 mx-3">
+                    <label for="default-input"
+                        class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Tanggal Lahir</label>
+                    <div class="flex items-center">
+                        <input type="date" id="default-input"
+                            class="bg-white border border-white text-white text-sm rounded-lg focus:ring-[#865BF4] focus:border-[#865BF4] block w-full p-2.5 dark:bg-white dark:border-white dark:text-black dark:focus:ring-[#865BF4] dark:focus:border-[#865BF4]" placeholder="Tanggal Lahir" name="tglLahirBayi" required>
+                    </div>
+                </div>
+    
+                {{-- input for "tempat lahir" type text --}}
+                <div class="mb-3 mx-3">
+                    <label for="default-input"
+                        class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Tempat Lahir</label>
+                    <div class="flex items-center">
+                        <input type="text" id="default-input"
+                            class="bg-white border border-white text-white text-sm rounded-lg focus:ring-[#865BF4] focus:border-[#865BF4] block w-full p-2.5 dark:bg-white dark:border-white dark:text-black dark:focus:ring-[#865BF4] dark:focus:border-[#865BF4]" placeholder="Tempat Lahir" name="tmptLahirBayi" required>
+                    </div>
+                </div>
+    
+                {{-- input for "nama ibu" type text --}}
+                <div class="mb-3 mx-3">
+                    <label for="default-input"
+                        class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Nama Ibu</label>
+                    <div class="flex items-center">
+                        <select class="bg-white border border-white text-white text-sm rounded-lg focus:ring-[#865BF4] focus:border-[#865BF4] block w-full p-2.5 dark:bg-white dark:border-white dark:text-black dark:focus:ring-[#865BF4] dark:focus:border-[#865BF4]" name="ibu_id" id="dataIbu" required>
+                            <option value="">Pilih Orang Tua</option>
+                            @foreach ($dataIbu as $item)
+                                <option value="{{ $item->id }}">
+                                    {{ $item->nama }}
+                                </option>
+                            @endforeach
+                        </select>
+                    </div>
+                </div>
+    
+                {{-- button to save baby data --}}
+                <div class=" mx-3">
+                    <button type="submit"
+                        class=" w-full text-white bg-[#865BF4] hover:bg-[#865BF4] focus:outline-none focus:ring-4 focus:ring-[#865BF4] font-medium rounded-full text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:bg-[#865BF4] dark:hover:bg-[#865BF4]dark:focus:ring-[#865BF4]">Simpan data bayi</button>
+                </div>
+            </form>
+        </div>
     </div>
 @endsection

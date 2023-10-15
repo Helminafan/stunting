@@ -3,6 +3,7 @@
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\KalenderController;
 use App\Http\Controllers\OrangTuaController;
+use App\Http\Controllers\BayiController;
 use App\Http\Controllers\RoleController;
 use Illuminate\Support\Facades\Route;
 use Laravel\Jetstream\Rules\Role;
@@ -91,15 +92,25 @@ Route::group(['prefix' => 'kader', 'middleware' => [
         return view('admin.dashboard');
     })->name('admin.dashboard');
     Route::get('/kalender', [KalenderController::class, 'index'])->name('kalender');
-    Route::get('/tambahData', function () {
-        return view('admin.tambahData');
-    });
-    Route::get('/dataAnak', function () {
-        return view('admin.dataAnak');
-    });
+    Route::get('/tambahData', [BayiController::class, 'tambahDataBayi'])->name('tambahData.view');
+    Route::get('/dataAnak', [BayiController::class, 'daftarBayi'])->name('dataBayi.view');
+    Route::post('/storeDataAnak', [BayiController::class, 'simpanDataBayi'])->name('dataBayi.store');
+
     Route::get('/akun', function () {
         return view('admin.akun');
     });
+    Route::get('/akunkader', function () {
+        return view('admin.akunKader');
+    });
+    Route::get('/kepriv', function () {
+        return view('admin.kepriv');
+    });
+    Route::get('/tentang', function () {
+        return view('admin.tentang');
+    });
+    // Route::get('/data-kesehatan', function () {
+    //     return view('admin.dataKesehatanAnak');
+    // });
     Route::get('/tambahJadwal', [KalenderController::class, 'create'])->name('tambahKalender');
     Route::post('/storeJadwal', [KalenderController::class, 'store'])->name('storeKalender');
     Route::get('/getKalender', [KalenderController::class, 'getKalender']);
