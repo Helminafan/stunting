@@ -3,7 +3,7 @@
     <div class="h-28 bg-[#D981B4] rounded-b-[60px]">
         <div class="flex justify-between items-center mx-6 pt-4">
             <div class="text-white">
-                <h1 class="font-medium text-lg">Stunting</h1>
+                <h1 class="font-bold text-lg">Stunting</h1>
             </div>
             <div class="text-white">
                 <i class="fa-solid fa-bell"></i>
@@ -16,7 +16,7 @@
 
     <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
         <div class="flex flex-col">
-            <input type="text" id="find" class="border rounded-lg border-gray-400 hover:border-black focus:border-black p-[8px_10px]" name="email" placeholder="Cari..." required > 
+            <input type="text" id="find" class="border rounded-lg border-gray-400 hover:border-black focus:border-black p-[8px_10px]" name="searchAnak" placeholder="Cari..." required > 
         </div>
     </div>
   
@@ -24,32 +24,28 @@
         <h1>Data Anak</h1>
         <hr class="border-gray-500 ">
     </div>
-    {{-- Data Anak --}}
-    <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
-      <div class="bg-white rounded-3xl shadow-xl">
-        <div class="flex items-center px-5 py-3">
-            <div class="bg-red-500 bg-cover w-12 h-12 mr-2 rounded-[500px]"
-                style="background-image: url({{ asset('kader/foto/helmi.jpg') }});"></div>
-            <div>
-                <h2 class="font-bold text-xs">Helmi Napan</h2>
-                <h2 class="font-extralight text-xs">Biodata bayi yang bersangkutan</h2>
+
+    {{-- Card data Anak --}}
+    @foreach ($allDataBayi as $item =>$row)
+    <a href="{{ url('/kader/data-kesehatan') }}">
+        <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+            <div class="bg-white rounded-3xl shadow-xl">
+              <div class="flex items-center px-5 py-3">
+                  <div class="bg-[#D981B4] bg-cover w-12 h-12 mr-2 rounded-[500px]"
+                      style="background-image: url({{ asset('kader/foto/baby.png') }});"></div>
+                  <div>
+                      <h2 class="font-bold text-xs">{{$row->namaBayi}}</h2>
+                      <h2 class="font-extralight text-xs">Biodata bayi yang bersangkutan</h2>
+                  </div>
+              </div>
             </div>
-        </div>
-      </div>
-    </div>
-    <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
-      <div class="bg-white rounded-3xl shadow-xl">
-        <div class="flex items-center px-5 py-3">
-            <div class="bg-red-500 bg-cover w-12 h-12 mr-2 rounded-[500px]"
-                style="background-image: url({{ asset('kader/foto/helmi.jpg') }});"></div>
-            <div>
-                <h2 class="font-bold text-xs">Napan Helmi</h2>
-                <h2 class="font-extralight text-xs">Biodata bayi yang bersangkutan</h2>
-            </div>
-        </div>
-      </div>
-    </div>
-    <a href="{{url('kader/tambahData')}}" class="rounded-full w-14 h-14 flex fixed bottom-16 right-5 bg-[#D981B4] text-[35px]">
+          </div>
+    </a>
+    @endforeach
+    
+
+    
+    <a href="{{route('tambahData.view')}}" class="rounded-full w-14 h-14 flex fixed bottom-16 right-5 bg-[#D981B4] text-[35px]">
         <div class="mx-auto text-white"> <i class="fa-solid fa-plus" ></i></div>
     </a>
 @endsection
