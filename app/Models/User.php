@@ -60,4 +60,9 @@ class User extends Authenticatable
     protected $appends = [
         'profile_photo_url',
     ];
+    public function dataIbu()
+    {
+        return $this->hasOne(Ibu::class, 'user_id');
+       
+    }
 }

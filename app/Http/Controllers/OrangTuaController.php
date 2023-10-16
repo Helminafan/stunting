@@ -3,17 +3,21 @@
 namespace App\Http\Controllers;
 
 use App\Models\Ayah;
+use App\Models\Bayi;
 use App\Models\Ibu;
 use App\Models\User;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
 class OrangTuaController extends Controller
 {
-    public function create_ibu(){
+    public function create_ibu()
+    {
         return view('user/dataIbu');
     }
-    public function storeIbu(Request $request){
+    public function storeIbu(Request $request)
+    {
         $data = new Ibu();
         $data->nama = $request->nama;
         $data->nik = $request->nik;
@@ -27,10 +31,12 @@ class OrangTuaController extends Controller
         $updateData->update();
         return redirect()->route('dashboard');
     }
-    public function create_ayah(){
+    public function create_ayah()
+    {
         return view('user/dataAyah');
     }
-    public function storeAyah(Request $request){
+    public function storeAyah(Request $request)
+    {
         $data = new Ayah();
         $data->nama = $request->nama;
         $data->nik = $request->nik;
@@ -44,5 +50,25 @@ class OrangTuaController extends Controller
         $updateData->ayah_complete = true;
         $updateData->update();
         return redirect()->route('dashboard');
+    }
+    public function homeDashboard()
+    {
+        $user = Auth::user();
+        $ibuId = $user->dataIbu->id;
+        $data = Bayi::with('ibuBayi')
+            ->where('ibu_id', $ibuId)
+            ->get();
+            $selisihBulan = [];
+            foreach ($data as $bayi) {
+                if (isset($bayi->tglLahirBayi)) {
+                    $tanggalLahir = Carbon::parse($bayi->tglLahirBayi);
+                    $tanggalSekarang = Carbon::now();
+                    $selisihBulan[] = $tanggalLahir->diffInMonths($tanggalSekarang);
+                } else {
+                    // Jika tglLahirBayi tidak tersedia
+                    $selisihBulan[] = '';
+                }
+            }
+        return view('user.home', compact('data','selisihBulan'));
     }
 }
