@@ -96,6 +96,9 @@ Route::group(['prefix' => 'kader', 'middleware' => [
     Route::get('/akun', function () {
         return view('admin.akun');
     });
+    Route::get('/dataKesehatanAnak', function () {
+        return view('admin.dataKesehatanAnak');
+    });
     Route::get('/akunkader', function () {
         return view('admin.akunKader');
     });
