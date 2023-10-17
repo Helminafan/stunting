@@ -37,9 +37,7 @@ Route::group(['prefix' => 'user', 'middleware' => [
     config('jetstream.auth_session'),
     'verified',
 ]], function () {
-    Route::get('/home', function () {
-        return view('user.home');
-    })->name('user.home');
+    Route::get('/home', [OrangTuaController::class,'homeDashboard'])->name('user.home');
     Route::get('/bayi', function () {
         return view('user.bayi');
     });

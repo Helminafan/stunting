@@ -23,11 +23,13 @@ class BayiController extends Controller
     // function for store data from 'tambahDataBayi' function
     public function simpanDataBayi(Request $request){
         $dataBayi = new Bayi();
+        $dataBayi -> nikBayi = $request -> nikBayi;
         $dataBayi -> namaBayi = $request -> namaBayi;
         $dataBayi -> tglLahirBayi = $request -> tglLahirBayi;
         $dataBayi -> tmptLahirBayi = $request -> tmptLahirBayi;
         $dataBayi -> jenisKelamin = $request -> jenisKelamin;
         $dataBayi -> ibu_id = $request -> ibu_id;
+        $dataBayi -> jenisKelamin = $request -> jenisKelamin;
         $dataBayi ->save();
         return redirect()->route('dataBayi.view');
     }

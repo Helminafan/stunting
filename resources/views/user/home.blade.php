@@ -2,29 +2,44 @@
 @include('user.component.headerCard')
 @section('user')
     <div class="font-semibold mt-10 mb-4 mx-6">
-        <h1>
-            Pengumuman Terbaru
-        </h1>
     </div>
     <div class="card">
-        <div class="bg-white rounded-xl mb-4 shadow-xl py-3 mx-6 w-[300px] ">
-            <div class="flex items-center text-slate-500 justify-between mb-1 px-5 ">
-                <h2 class="font-medium text-xs">Jadwal Pemriksaan Stunting</h2>
-                <p class="text-xs font-semibold">12 Agustus 2023</p>
+        @foreach ($data as $item => $row)
+            <div class="bg-white rounded-xl mb-4 shadow-xl py-3 mx-6 w-[300px] ">
+                <div class="flex justify-between  items-center text-slate-500  mb-1 px-5 ">
+                    <div class="flex items-center">
+                        <div class="bg-[#D981B4] bg-cover w-10 h-10 mr-2 rounded-[500px]"
+                            style="background-image: url({{ asset('kader/foto/baby.png') }});"></div>
+                        <h2 class="font-medium text-xs">{{ $row->namaBayi }}</h2>
+                    </div>
+                    <h2 class="font-normal text-[9px] p-[5px] bg-[#5CEC18] text-white rounded"> Normal</h2>
+                </div>
+                <hr class="mb-2">
+                <div class="px-7">
+                    <div class="flex">
+                        <p class="text-[10px] font-medium text-slate-500 w-16">NIK</p>
+                        <p class="text-[10px] font-medium text-slate-500 px-2">:</p>
+                        <p class="text-[10px] font-medium text-slate-500 ">{{$row->nikBayi}}</p>
+                    </div>
+                    <div class="flex">
+                        <p class="text-[10px] font-medium text-slate-500 w-16">Tanggal Lahir</p>
+                        <p class="text-[10px] font-medium text-slate-500 px-2">:</p>
+                        <p class="text-[10px] font-medium text-slate-500 ">{{$row->tglLahirBayi}}</p>
+                    </div>
+                    <div class="flex">
+                        <p class="text-[10px] font-medium text-slate-500 w-16">Usia</p>
+                        <p class="text-[10px] font-medium text-slate-500 px-2">:</p>
+                        <p class="text-[10px] font-medium text-slate-500 ">{{$selisihBulan[$loop->index]}} Bulan</p>
+                    </div>
+                    <div class="flex">
+                        <p class="text-[10px] font-medium text-slate-500 w-16">Jenis Kelamin</p>
+                        <p class="text-[10px] font-medium text-slate-500 px-2">:</p>
+                        <p class="text-[10px] font-medium text-slate-500 ">{{$row->jenisKelamin}}</p>
+                    </div>
+                </div>
             </div>
-            <p class="text-[9px] text-slate-500 px-5">Jadwal Stunting akan dilaksanakan di tempat antah berantah pada
-                jam
-                10.00 wib</p>
-        </div>
-        <div class="bg-white rounded-xl mb-4 shadow-xl py-3 mx-6 w-[300px] ">
-            <div class="flex items-center text-slate-500 justify-between mb-1 px-5 ">
-                <h2 class="font-medium text-xs">Jadwal Pemriksaan Stunting</h2>
-                <p class="text-xs font-semibold">12 Agustus 2023</p>
-            </div>
-            <p class="text-[9px] text-slate-500 px-5">Jadwal Stunting akan dilaksanakan di tempat antah berantah pada
-                jam
-                10.00 wib</p>
-        </div>
+        @endforeach
+
     </div>
     <div class="font-semibold mt-5 mb-4 mx-6">
         <h1>
@@ -172,7 +187,7 @@
                             padding: 10,
                             // Include a dollar sign in the ticks
                             callback: function(value, index, values) {
-                                return  number_format(value);
+                                return number_format(value);
                             }
                         },
                         gridLines: {

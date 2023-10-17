@@ -14,5 +14,4 @@ class Bayi extends Model
     public function ibuBayi(){
         return $this->belongsTo(Ibu::class,'ibu_id','id');
     }
-    
 }
