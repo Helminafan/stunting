@@ -74,6 +74,19 @@
                             placeholder="Tempat Lahir" name="tmptLahirBayi" required>
                     </div>
                 </div>
+                
+                {{-- input for "jenis kelamin" type text --}}
+                <div class="mb-3 mx-3">
+                    <label for="default-input"
+                        class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Jenis Kelamin</label>
+                    <div class="flex items-center">
+                        <select type="text" id="default-input"
+                            class="bg-white border border-white text-white text-sm rounded-lg focus:ring-[#865BF4] focus:border-[#865BF4] block w-full p-2.5 dark:bg-white dark:border-white dark:text-black dark:focus:ring-[#865BF4] dark:focus:border-[#865BF4]" placeholder="Jenis Kelamin" name="jenisKelamin" required>
+                            <option value="L">Laki-laki</option>
+                            <option value="P">Perempuan</option>
+                        </select>
+                    </div>
+                </div>
 
                 {{-- input for "nama ibu" type text --}}
                 <div class="mb-3 mx-3">

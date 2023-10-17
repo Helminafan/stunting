@@ -32,7 +32,6 @@ Route::middleware(['OneTimeAccess', 'auth:sanctum', config('jetstream.auth_sessi
 });
 
 Route::group(['prefix' => 'user', 'middleware' => [
-    
     'EnsureProfileCompleted',
     'auth:sanctum',
     config('jetstream.auth_session'),
@@ -92,6 +91,7 @@ Route::group(['prefix' => 'kader', 'middleware' => [
     Route::get('/tambahData', [BayiController::class, 'tambahDataBayi'])->name('tambahData.view');
     Route::get('/dataAnak', [BayiController::class, 'daftarBayi'])->name('dataBayi.view');
     Route::post('/storeDataAnak', [BayiController::class, 'simpanDataBayi'])->name('dataBayi.store');
+    Route::get('/detailData/{id}', [BayiController::class, 'detailDataBayi'])->name('detailData.edit');
 
     Route::get('/akun', function () {
         return view('admin.akun');
