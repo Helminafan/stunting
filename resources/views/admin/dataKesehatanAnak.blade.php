@@ -57,8 +57,8 @@
                         <label for="default-input" class="block mb-2 text-sm font-medium text-white">Tinggi Badan</label>
                         <div class="flex items-center">
                             <input type="number" id="default-input"
-                                class="bg-white border border-white text-white text-sm rounded-lg focus:ring-[#865BF4] focus:border-[#865BF4] block w-full p-2.5 dark:bg-white dark:border-white dark:placeholder-white dark:text-black dark:focus:ring-[#865BF4] dark:focus:border-[#865BF4]">
-                                <button class="m-2 rounded bg-[#FFB0DE] px-4 py-2 text-white font-bold">cm</button>
+                                class="bg-white border border-white text-white text-sm rounded-lg focus:ring-[#865BF4] focus:border-[#865BF4] block w-full p-2.5 dark:bg-white dark:border-white dark:placeholder-white dark:text-black dark:focus:ring-[#865BF4] dark:focus:border-[#865BF4]" placeholder="Tinggi Badan" required>
+                                <button class="m-2 rounded bg-[#FFB0DE] px-4 py-2 text-white font-bold" disabled>cm</button>
                         </div>
                     </div>
                     
@@ -67,21 +67,28 @@
                         <label for="default-input" class="block mb-2 text-sm font-medium text-white">Berat Badan</label>
                         <div class="flex items-center">
                             <input type="number" id="default-input"
-                                class="bg-white border border-white text-white text-sm rounded-lg focus:ring-[#865BF4] focus:border-[#865BF4] block w-full p-2.5 dark:bg-white dark:border-white dark:placeholder-white dark:text-black dark:focus:ring-[#865BF4] dark:focus:border-[#865BF4]">
-                                <button class="m-2 rounded bg-[#FFB0DE] px-4 py-2 text-white font-bold">kg</button>
+                                class="bg-white border border-white text-white text-sm rounded-lg focus:ring-[#865BF4] focus:border-[#865BF4] block w-full p-2.5 dark:bg-white dark:border-white dark:placeholder-white dark:text-black dark:focus:ring-[#865BF4] dark:focus:border-[#865BF4]" placeholder="Berat Badan" required>
+                                <button class="m-2 rounded bg-[#FFB0DE] px-4 py-2 text-white font-bold" disabled>kg</button>
                         </div>
                     </div>
 
-                    {{-- deviden line --}}
-                    <hr class="w-48 h-1 mx-auto my-4 bg-white border-0 rounded md:my-10 dark:bg-white">
-
+                    {{-- input for "lingkar kepala" type number --}}
+                    <div class="mb-3 mx-3">
+                        <label for="default-input" class="block mb-2 text-sm font-medium text-white">Lingkar Kepala (opsional)</label>
+                        <div class="flex items-center">
+                            <input type="number" id="default-input"
+                                class="bg-white border border-white text-white text-sm rounded-lg focus:ring-[#865BF4] focus:border-[#865BF4] block w-full p-2.5 dark:bg-white dark:border-white dark:placeholder-white dark:text-black dark:focus:ring-[#865BF4] dark:focus:border-[#865BF4]" placeholder="Lingkar Kepala">
+                                <button class="m-2 rounded bg-[#FFB0DE] px-4 py-2 text-white font-bold" disabled>cm</button>
+                        </div>
+                    </div>
+                    
                     {{-- textarea for "keterangan" --}}
                     <div class="mb-3 mx-3">
                         <label for="message" class="block mb-2 text-sm font-medium text-grey dark:text-white">Keterangan</label>
                         <textarea id="message" rows="4" class="block p-2.5 w-full text-sm text-grey bg-gray-50 rounded-lg border border-gray-300 focus:ring-[#865BF4] focus:border-[#865BF4] dark:bg-white dark:white dark:placeholder-gray-400 dark:text-grey dark:focus:ring-[#865BF4] dark:focus:border-[#865BF4]" placeholder="Uraian perkembangan motorik anak"></textarea>
                     </div>
 
-                    {{-- save button for update baby data --}}
+                    {{-- save button for "kesehatan bayi" data --}}
                     <div class=" mx-3">
                         <button type="button"
                             class=" w-full text-white bg-[#865BF4] hover:bg-[#865BF4] focus:outline-none focus:ring-4 focus:ring-[#865BF4] font-medium rounded-full text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:bg-[#865BF4] dark:hover:bg-[#865BF4]dark:focus:ring-[#865BF4]">Simpan</button>
@@ -93,54 +100,57 @@
                     <h1 class="font-bold text-center mb-3 text-white">Grafik Perkembangan</h1>
 
                     {{-- identity --}}
-                    {{-- name --}}
-                    <div class="mb-3 mx-3">
-                        <label for="default-input" class="block mb-2 text-sm font-medium text-white">Nama</label>
-                        <div class="flex items-center">
-                            <input type="text" id="default-input"
-                                class="bg-white border border-white text-white text-sm rounded-lg focus:ring-[#865BF4] focus:border-[#865BF4] block w-full p-2.5 dark:bg-white dark:border-white dark:placeholder-white dark:text-black dark:focus:ring-[#865BF4] dark:focus:border-[#865BF4]">
-                        </div>
-                    </div>
 
-                    {{-- date of birth --}}
-                    <div class="mb-3 mx-3">
-                        <label for="default-input" class="block mb-2 text-sm font-medium text-white">Tanggal Lahir</label>
-                        <div class="flex items-center">
-                            <input type="date" id="default-input"
-                                class="bg-white border border-white text-white text-sm rounded-lg focus:ring-[#865BF4] focus:border-[#865BF4] block w-full p-2.5 dark:bg-white dark:border-white dark:placeholder-white dark:text-black dark:focus:ring-[#865BF4] dark:focus:border-[#865BF4]">
+                    <form method="GET" action="#" enctype="multipart/form-data">
+                        @csrf
+                        {{-- name --}}
+                        <div class="mb-3 mx-3">
+                            <label for="default-input" class="block mb-2 text-sm font-medium text-white">Nama</label>
+                            <div class="flex items-center">
+                                <input type="text" id="disabled-input" aria-label="disabled input"
+                                    class="bg-white border border-white text-white text-sm rounded-lg focus:ring-[#865BF4] focus:border-[#865BF4] block w-full p-2.5 dark:bg-white dark:border-white dark:placeholder-white dark:text-black dark:focus:ring-[#865BF4] dark:focus:border-[#865BF4]" value="{{ $detailBayi->namaBayi}}" disabled>
+                            </div>
                         </div>
-                    </div>
 
-                    {{-- age --}}
-                    <div class="mb-3 mx-3">
-                        <label for="default-input" class="block mb-2 text-sm font-medium text-white">Usia</label>
-                        <div class="flex items-center">
-                            <input type="number" id="default-input"
-                                class="bg-white border border-white text-white text-sm rounded-lg focus:ring-[#865BF4] focus:border-[#865BF4] block w-full p-2.5 dark:bg-white dark:border-white dark:placeholder-white dark:text-black dark:focus:ring-[#865BF4] dark:focus:border-[#865BF4]">
-                                <button class="m-2 rounded bg-[#FFB0DE] px-4 py-2 text-white font-bold">Bln</button>
+                        {{-- date of birth --}}
+                        <div class="mb-3 mx-3">
+                            <label for="default-input" class="block mb-2 text-sm font-medium text-white">Tanggal Lahir</label>
+                            <div class="flex items-center">
+                                <input type="date" id="disabled-input" aria-label="disabled input"
+                                    class="bg-white border border-white text-white text-sm rounded-lg focus:ring-[#865BF4] focus:border-[#865BF4] block w-full p-2.5 dark:bg-white dark:border-white dark:placeholder-white dark:text-black dark:focus:ring-[#865BF4] dark:focus:border-[#865BF4]" value="{{ $detailBayi->tglLahirBayi}}" disabled>
+                            </div>
                         </div>
-                    </div>
 
-                    {{-- gender --}}
-                    <div class="mb-3 mx-3">
-                        <label for="default-input" class="block mb-2 text-sm font-medium text-white">Kelamin</label>
-                        <div class="flex items-center">
-                            <input type="tect" id="default-input"
-                                class="bg-white border border-white text-white text-sm rounded-lg focus:ring-[#865BF4] focus:border-[#865BF4] block w-full p-2.5 dark:bg-white dark:border-white dark:placeholder-white dark:text-black dark:focus:ring-[#865BF4] dark:focus:border-[#865BF4]">
+                        {{-- age --}}
+                        <div class="mb-3 mx-3">
+                            <label for="default-input" class="block mb-2 text-sm font-medium text-white">Usia</label>
+                            <div class="flex items-center">
+                                <input type="text" id="disabled-input" aria-label="disabled input"
+                                    class="bg-white border border-white text-white text-sm rounded-lg focus:ring-[#865BF4] focus:border-[#865BF4] block w-full p-2.5 dark:bg-white dark:border-white dark:placeholder-white dark:text-black dark:focus:ring-[#865BF4] dark:focus:border-[#865BF4]" value="{{ $detailBayi->tglLahirBayi}}" disabled>
+                                    <button class="m-2 rounded bg-[#FFB0DE] px-4 py-2 text-white font-bold" disabled>Bln</button>
+                            </div>
                         </div>
-                    </div>
 
-                     {{-- status --}}
-                     <div class="mb-3 mx-3">
-                        <label for="default-input" class="block mb-2 text-sm font-medium text-white">Status</label>
-                        <div class="flex items-center">
-                            <input type="tect" id="default-input"
-                                class="bg-white border border-white text-white text-sm rounded-lg focus:ring-[#865BF4] focus:border-[#865BF4] block w-full p-2.5 dark:bg-white dark:border-white dark:placeholder-white dark:text-black dark:focus:ring-[#865BF4] dark:focus:border-[#865BF4]">
+                        {{-- gender --}}
+                        <div class="mb-3 mx-3">
+                            <label for="default-input" class="block mb-2 text-sm font-medium text-white">Kelamin</label>
+                            <div class="flex items-center">
+                                <input type="tect" id="disabled-input" aria-label="disabled input"
+                                    class="bg-white border border-white text-white text-sm rounded-lg focus:ring-[#865BF4] focus:border-[#865BF4] block w-full p-2.5 dark:bg-white dark:border-white  dark:placeholder-white dark:text-black dark:focus:ring-[#865BF4] dark:focus:border-[#865BF4]" value="{{ $detailBayi->jenisKelamin}}" disabled>
+                            </div>
                         </div>
-                    </div>
+
+                        {{-- status --}}
+                        <div class="mb-3 mx-3">
+                            <label for="default-input" class="block mb-2 text-sm font-medium text-white">Status</label>
+                            <div class="flex items-center">
+                                <input type="tect" id="disabled-input" aria-label="disabled input"
+                                    class="bg-white border border-white text-white text-sm rounded-lg focus:ring-[#865BF4] focus:border-[#865BF4] block w-full p-2.5 dark:bg-white dark:border-white dark:placeholder-white dark:text-black dark:focus:ring-[#865BF4] dark:focus:border-[#865BF4]" value="Aman" disabled>
+                            </div>
+                        </div>
+                    </form>
                 </div>
             </div>
-            
         </div>
     </section>
     <script src="{{asset('user/tab-content.js')}}"></script>

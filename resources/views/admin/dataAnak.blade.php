@@ -27,7 +27,7 @@
 
     {{-- Card data Anak --}}
     @foreach ($allDataBayi as $item =>$row)
-    <a href="{{ url('/kader/data-kesehatan') }}">
+    <a href="{{route('detailData.edit', $row->id)}}">
         <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
             <div class="bg-white rounded-3xl shadow-xl">
               <div class="flex items-center px-5 py-3">
