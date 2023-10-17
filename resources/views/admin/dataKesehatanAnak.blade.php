@@ -108,7 +108,7 @@
                             <label for="default-input" class="block mb-2 text-sm font-medium text-white">Nama</label>
                             <div class="flex items-center">
                                 <input type="text" id="disabled-input" aria-label="disabled input"
-                                    class="bg-white border border-white text-white text-sm rounded-lg focus:ring-[#865BF4] focus:border-[#865BF4] block w-full p-2.5 dark:bg-white dark:border-white dark:placeholder-white dark:text-black dark:focus:ring-[#865BF4] dark:focus:border-[#865BF4]" value="{{ $detailBayi->namaBayi}}" disabled>
+                                    class="bg-white border border-white  text-sm rounded-lg focus:ring-[#865BF4] focus:border-[#865BF4] block w-full p-2.5 dark:bg-white dark:border-white dark:placeholder-white dark:text-black dark:focus:ring-[#865BF4] dark:focus:border-[#865BF4]" value="{{ $detailBayi->namaBayi}}" disabled>
                             </div>
                         </div>
 
@@ -117,7 +117,7 @@
                             <label for="default-input" class="block mb-2 text-sm font-medium text-white">Tanggal Lahir</label>
                             <div class="flex items-center">
                                 <input type="date" id="disabled-input" aria-label="disabled input"
-                                    class="bg-white border border-white text-white text-sm rounded-lg focus:ring-[#865BF4] focus:border-[#865BF4] block w-full p-2.5 dark:bg-white dark:border-white dark:placeholder-white dark:text-black dark:focus:ring-[#865BF4] dark:focus:border-[#865BF4]" value="{{ $detailBayi->tglLahirBayi}}" disabled>
+                                    class="bg-white border border-white  text-sm rounded-lg focus:ring-[#865BF4] focus:border-[#865BF4] block w-full p-2.5 dark:bg-white dark:border-white dark:placeholder-white dark:text-black dark:focus:ring-[#865BF4] dark:focus:border-[#865BF4]" value="{{ $detailBayi->tglLahirBayi}}" disabled>
                             </div>
                         </div>
 
@@ -126,7 +126,7 @@
                             <label for="default-input" class="block mb-2 text-sm font-medium text-white">Usia</label>
                             <div class="flex items-center">
                                 <input type="text" id="disabled-input" aria-label="disabled input"
-                                    class="bg-white border border-white text-white text-sm rounded-lg focus:ring-[#865BF4] focus:border-[#865BF4] block w-full p-2.5 dark:bg-white dark:border-white dark:placeholder-white dark:text-black dark:focus:ring-[#865BF4] dark:focus:border-[#865BF4]" value="{{$selisihBulan-> }}" disabled>
+                                    class="bg-white border border-white  text-sm rounded-lg focus:ring-[#865BF4] focus:border-[#865BF4] block w-full p-2.5 dark:bg-white dark:border-white dark:placeholder-white dark:text-black dark:focus:ring-[#865BF4] dark:focus:border-[#865BF4]" value="{{$selisihBulan}}" disabled>
                                     <button class="m-2 rounded bg-[#FFB0DE] px-4 py-2 text-white font-bold" disabled>Bln</button>
                             </div>
                         </div>
@@ -136,7 +136,7 @@
                             <label for="default-input" class="block mb-2 text-sm font-medium text-white">Kelamin</label>
                             <div class="flex items-center">
                                 <input type="tect" id="disabled-input" aria-label="disabled input"
-                                    class="bg-white border border-white text-white text-sm rounded-lg focus:ring-[#865BF4] focus:border-[#865BF4] block w-full p-2.5 dark:bg-white dark:border-white  dark:placeholder-white dark:text-black dark:focus:ring-[#865BF4] dark:focus:border-[#865BF4]" value="{{ $detailBayi->jenisKelamin}}" disabled>
+                                    class="bg-white border border-white  text-sm rounded-lg focus:ring-[#865BF4] focus:border-[#865BF4] block w-full p-2.5 dark:bg-white dark:border-white  dark:placeholder-white dark:text-black dark:focus:ring-[#865BF4] dark:focus:border-[#865BF4]" value="{{ $detailBayi->jenisKelamin}}" disabled>
                             </div>
                         </div>
 
@@ -145,7 +145,7 @@
                             <label for="default-input" class="block mb-2 text-sm font-medium text-white">Status</label>
                             <div class="flex items-center">
                                 <input type="tect" id="disabled-input" aria-label="disabled input"
-                                    class="bg-white border border-white text-white text-sm rounded-lg focus:ring-[#865BF4] focus:border-[#865BF4] block w-full p-2.5 dark:bg-white dark:border-white dark:placeholder-white dark:text-black dark:focus:ring-[#865BF4] dark:focus:border-[#865BF4]" value="Aman" disabled>
+                                    class="bg-white border border-white  text-sm rounded-lg focus:ring-[#865BF4] focus:border-[#865BF4] block w-full p-2.5 dark:bg-white dark:border-white dark:placeholder-white dark:text-black dark:focus:ring-[#865BF4] dark:focus:border-[#865BF4]" value="Aman" disabled>
                             </div>
                         </div>
                     </form>
