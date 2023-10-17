@@ -20,16 +20,17 @@
 
             <form class="bayi" method="POST" action="{{ route('dataBayi.store') }}" enctype="multipart/form-data">
                 @csrf
-                {{-- input for "nama bayi" type text --}}
+                {{-- input for "nik bayi" type text --}}
                 <div class="mb-3 mx-3">
                     <label for="default-input" class="block mb-2 text-sm font-medium text-white">NIK Bayi</label>
                     <div class="flex items-center">
-                        <input type="text" id="default-input"
+                        <input type="number" id="default-input"
                             class="bg-white border border-white  text-sm rounded-lg focus:ring-[#865BF4] focus:border-[#865BF4] block w-full p-2.5 dark:bg-white dark:border-white dark:text-black dark:focus:ring-[#865BF4] dark:focus:border-[#865BF4]"
                             placeholder="NIK Bayi" name="nikBayi" required>
                     </div>
                 </div>
 
+                {{-- input for "nama bayi" type text --}}
                 <div class="mb-3 mx-3">
                     <label for="default-input" class="block mb-2 text-sm font-medium text-white">Nama Bayi</label>
                     <div class="flex items-center">
@@ -50,6 +51,16 @@
                     </div>
                 </div>
 
+                {{-- input for "tempat lahir" type text --}}
+                <div class="mb-3 mx-3">
+                    <label for="default-input" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">TempatLahir</label>
+                    <div class="flex items-center">
+                        <input type="text" id="default-input"
+                            class="bg-white border border-white  text-sm rounded-lg focus:ring-[#865BF4] focus:border-[#865BF4] block w-full p-2.5 dark:bg-white dark:border-white dark:text-black dark:focus:ring-[#865BF4] dark:focus:border-[#865BF4]"
+                            placeholder="Tempat Lahir" name="tmptLahirBayi" required>
+                    </div>
+                </div>
+
                 <div class="mb-3 mx-3">
                     <label for="default-input" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Jenis
                         Kelamin</label>
@@ -57,33 +68,9 @@
                         <select
                             class="bg-white border border-white  text-sm rounded-lg focus:ring-[#865BF4] focus:border-[#865BF4] block w-full p-2.5 dark:bg-white dark:border-white dark:text-black dark:focus:ring-[#865BF4] dark:focus:border-[#865BF4]"
                             name="jenisKelamin" id="dataIbu" required>
-                            <option value="">Pilih Jenis Kelamin</option>
+                            <option value="null">Pilih Jenis Kelamin</option>
                             <option value="Laki-Laki">Laki Laki </option>
                             <option value="Perempuan">Perempuan </option>
-                        </select>
-                    </div>
-                </div>
-
-                {{-- input for "tempat lahir" type text --}}
-                <div class="mb-3 mx-3">
-                    <label for="default-input" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Tempat
-                        Lahir</label>
-                    <div class="flex items-center">
-                        <input type="text" id="default-input"
-                            class="bg-white border border-white  text-sm rounded-lg focus:ring-[#865BF4] focus:border-[#865BF4] block w-full p-2.5 dark:bg-white dark:border-white dark:text-black dark:focus:ring-[#865BF4] dark:focus:border-[#865BF4]"
-                            placeholder="Tempat Lahir" name="tmptLahirBayi" required>
-                    </div>
-                </div>
-                
-                {{-- input for "jenis kelamin" type text --}}
-                <div class="mb-3 mx-3">
-                    <label for="default-input"
-                        class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Jenis Kelamin</label>
-                    <div class="flex items-center">
-                        <select type="text" id="default-input"
-                            class="bg-white border border-white text-white text-sm rounded-lg focus:ring-[#865BF4] focus:border-[#865BF4] block w-full p-2.5 dark:bg-white dark:border-white dark:text-black dark:focus:ring-[#865BF4] dark:focus:border-[#865BF4]" placeholder="Jenis Kelamin" name="jenisKelamin" required>
-                            <option value="L">Laki-laki</option>
-                            <option value="P">Perempuan</option>
                         </select>
                     </div>
                 </div>
