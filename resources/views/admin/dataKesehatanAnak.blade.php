@@ -52,48 +52,55 @@
                     {{-- tab name "Hasil Penimbangan" --}}
                     <h1 class="font-bold text-center mb-3 text-white">Hasil Penimbangan</h1>
 
-                    {{-- input for "tinggi badan" type number --}}
-                    <div class="mb-3 mx-3">
-                        <label for="default-input" class="block mb-2 text-sm font-medium text-white">Tinggi Badan</label>
-                        <div class="flex items-center">
-                            <input type="number" id="default-input"
-                                class="bg-white border border-white text-white text-sm rounded-lg focus:ring-[#865BF4] focus:border-[#865BF4] block w-full p-2.5 dark:bg-white dark:border-white dark:placeholder-white dark:text-black dark:focus:ring-[#865BF4] dark:focus:border-[#865BF4]" placeholder="Tinggi Badan" required>
-                                <button class="m-2 rounded bg-[#FFB0DE] px-4 py-2 text-white font-bold" disabled>cm</button>
+                    <form class="bayi" method="POST" action="{{ route('kesehatanBayi.store') }}" enctype="multipart/form-data">
+                        @csrf
+                        {{-- input for "tinggi badan" type number --}}
+                        <div class="mb-3 mx-3">
+                            <label for="default-input" class="block mb-2 text-sm font-medium text-white">Tinggi Badan</label>
+                            <div class="flex items-center">
+                                <input type="number" id="default-input"
+                                    class="bg-white border border-white text-white text-sm rounded-lg focus:ring-[#865BF4] focus:border-[#865BF4] block w-full p-2.5 dark:bg-white dark:border-white dark:placeholder-white dark:text-black dark:focus:ring-[#865BF4] dark:focus:border-[#865BF4]" placeholder="Tinggi Badan" name="tb" required>
+                                    <button class="m-2 rounded bg-[#FFB0DE] px-4 py-2 text-white font-bold" disabled>cm</button>
+                            </div>
                         </div>
-                    </div>
-                    
-                    {{-- input for  "berat badan" type number --}}
-                    <div class="mb-3 mx-3">
-                        <label for="default-input" class="block mb-2 text-sm font-medium text-white">Berat Badan</label>
-                        <div class="flex items-center">
-                            <input type="number" id="default-input"
-                                class="bg-white border border-white text-white text-sm rounded-lg focus:ring-[#865BF4] focus:border-[#865BF4] block w-full p-2.5 dark:bg-white dark:border-white dark:placeholder-white dark:text-black dark:focus:ring-[#865BF4] dark:focus:border-[#865BF4]" placeholder="Berat Badan" required>
-                                <button class="m-2 rounded bg-[#FFB0DE] px-4 py-2 text-white font-bold" disabled>kg</button>
+                        
+                        {{-- input for  "berat badan" type number --}}
+                        <div class="mb-3 mx-3">
+                            <label for="default-input" class="block mb-2 text-sm font-medium text-white">Berat Badan</label>
+                            <div class="flex items-center">
+                                <input type="number" id="default-input"
+                                    class="bg-white border border-white text-white text-sm rounded-lg focus:ring-[#865BF4] focus:border-[#865BF4] block w-full p-2.5 dark:bg-white dark:border-white dark:placeholder-white dark:text-black dark:focus:ring-[#865BF4] dark:focus:border-[#865BF4]" placeholder="Berat Badan" name="bb" required>
+                                    <button class="m-2 rounded bg-[#FFB0DE] px-4 py-2 text-white font-bold" disabled>kg</button>
+                            </div>
                         </div>
-                    </div>
 
-                    {{-- input for "lingkar kepala" type number --}}
-                    <div class="mb-3 mx-3">
-                        <label for="default-input" class="block mb-2 text-sm font-medium text-white">Lingkar Kepala (opsional)</label>
-                        <div class="flex items-center">
-                            <input type="number" id="default-input"
-                                class="bg-white border border-white text-white text-sm rounded-lg focus:ring-[#865BF4] focus:border-[#865BF4] block w-full p-2.5 dark:bg-white dark:border-white dark:placeholder-white dark:text-black dark:focus:ring-[#865BF4] dark:focus:border-[#865BF4]" placeholder="Lingkar Kepala">
-                                <button class="m-2 rounded bg-[#FFB0DE] px-4 py-2 text-white font-bold" disabled>cm</button>
+                        {{-- input for "lingkar kepala" type number --}}
+                        <div class="mb-3 mx-3">
+                            <label for="default-input" class="block mb-2 text-sm font-medium text-white">Lingkar Kepala (opsional)</label>
+                            <div class="flex items-center">
+                                <input type="number" id="default-input"
+                                    class="bg-white border border-white text-white text-sm rounded-lg focus:ring-[#865BF4] focus:border-[#865BF4] block w-full p-2.5 dark:bg-white dark:border-white dark:placeholder-white dark:text-black dark:focus:ring-[#865BF4] dark:focus:border-[#865BF4]" placeholder="Lingkar Kepala" name="lingkep">
+                                    <button class="m-2 rounded bg-[#FFB0DE] px-4 py-2 text-white font-bold" disabled>cm</button>
+                            </div>
                         </div>
-                    </div>
-                    
-                    {{-- textarea for "keterangan" --}}
-                    <div class="mb-3 mx-3">
-                        <label for="message" class="block mb-2 text-sm font-medium text-grey dark:text-white">Keterangan</label>
-                        <textarea id="message" rows="4" class="block p-2.5 w-full text-sm text-grey bg-gray-50 rounded-lg border border-gray-300 focus:ring-[#865BF4] focus:border-[#865BF4] dark:bg-white dark:white dark:placeholder-gray-400 dark:text-grey dark:focus:ring-[#865BF4] dark:focus:border-[#865BF4]" placeholder="Uraian perkembangan motorik anak"></textarea>
-                    </div>
+                        
+                        {{-- get id bayi --}}
+                        <div class="mb-3 mx-3">
+                           <input type="hidden" value="{{ $detailBayi->id}}" name="bayi_id">
+                        </div>
 
-                    {{-- save button for "kesehatan bayi" data --}}
-                    <div class=" mx-3">
-                        <button type="button"
-                            class=" w-full text-white bg-[#865BF4] hover:bg-[#865BF4] focus:outline-none focus:ring-4 focus:ring-[#865BF4] font-medium rounded-full text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:bg-[#865BF4] dark:hover:bg-[#865BF4]dark:focus:ring-[#865BF4]">Simpan</button>
-                    </div>
-    
+                        {{-- textarea for "keterangan" --}}
+                        <div class="mb-3 mx-3">
+                            <label for="message" class="block mb-2 text-sm font-medium text-grey dark:text-white">Keterangan</label>
+                            <textarea id="message" rows="4" class="block p-2.5 w-full text-sm text-grey bg-gray-50 rounded-lg border border-gray-300 focus:ring-[#865BF4] focus:border-[#865BF4] dark:bg-white dark:white dark:placeholder-gray-400 dark:text-grey dark:focus:ring-[#865BF4] dark:focus:border-[#865BF4]" placeholder="Uraian perkembangan motorik anak" name="ket"></textarea>
+                        </div>
+
+                        {{-- save button for "kesehatan bayi" data --}}
+                        <div class=" mx-3">
+                            <button type="submit"
+                                class=" w-full text-white bg-[#865BF4] hover:bg-[#865BF4] focus:outline-none focus:ring-4 focus:ring-[#865BF4] font-medium rounded-full text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:bg-[#865BF4] dark:hover:bg-[#865BF4]dark:focus:ring-[#865BF4]">Simpan</button>
+                        </div>
+                    </form>
                 </div>
                 <div role="tabpanel" id="panel-2" class=" tab-panel invisible absolute w-full my-5 top-0">
                     {{-- tab name "Grafik Perkembangan" --}}
