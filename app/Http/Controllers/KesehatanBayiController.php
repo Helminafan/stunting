@@ -20,10 +20,4 @@ class KesehatanBayiController extends Controller
         $dataKesehatanBayi->save();
         return redirect()->route('dataBayi.view');
     }
-
-    // function for show "data kesehatan bayi"
-    public function viewKesehatanBayi($id){
-        $dataKesehatanBayi = KesehatanBayi::find($id)->get();
-        return view('admin.dataKesehatanAnak', compact('dataKesehatanBayi'));
-    }
 }

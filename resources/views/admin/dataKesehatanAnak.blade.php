@@ -149,28 +149,10 @@
                     {{-- tab name "Grafik Perkembangan" --}}
                     <h1 class="font-bold text-center mb-3 text-white">Grafik Perkembangan</h1>
 
-                    {{-- medical table --}}
+                    {{-- graphic --}}
                     <div class="mb-3 mx-3">
-                        <table class="min-w-full text-left text-white text-sm font-white">
-                            <thead class="border-b font-medium dark:border-white">
-                              <tr>
-                                <th scope="col" class="px-3 py-2">Usia</th>
-                                <th scope="col" class="px-3 py-2">TB</th>
-                                <th scope="col" class="px-3 py-2">BB</th>
-                                <th scope="col" class="px-3 py-2">Status</th>
-                              </tr>
-                            </thead>
-                            <tbody>
-                                <tr class="border-b dark:border-white">
-                                    <td class="whitespace-nowrap px-3 py-2 font-medium">1</td>
-                                    <td class="whitespace-nowrap px-3 py-2">w</td>
-                                    <td class="whitespace-nowrap px-3 py-2">w</td>
-                                    <td class="whitespace-nowrap px-3 py-2">e</td>
-                                  </tr>
-                            </tbody>
-                          </table>
+                        
                     </div>
-                     
                 </div>
             </div> 
 
