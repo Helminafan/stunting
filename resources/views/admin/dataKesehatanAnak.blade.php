@@ -31,6 +31,44 @@
                 </div>
             </div>
 
+            {{-- card identity --}}
+            <form method="GET" action="#" enctype="multipart/form-data">
+                @csrf
+                <div class="bg-white items-center rounded-xl mb-4 shadow-xl py-3 mx-6 ">
+                    <div class="flex justify-between  items-center text-slate-500  mb-1 px-5 ">
+                        <div class="flex items-center">
+                            <div class="bg-[#D981B4] bg-cover w-10 h-10 mr-2 rounded-[500px]"
+                                style="background-image: url({{ asset('kader/foto/baby.png') }});"></div>
+                            <h2 class="font-medium text-xs">{{ $detailBayi->namaBayi}}</h2>
+                        </div>
+                        <h2 class="font-normal text-[9px] p-[5px] bg-[#5CEC18] text-white rounded"> Normal</h2>
+                    </div>
+                    <hr class="mb-2">
+                    <div class="px-7">
+                        <div class="flex">
+                            <p class="text-[10px] font-medium text-slate-500 w-16">NIK</p>
+                            <p class="text-[10px] font-medium text-slate-500 px-2">:</p>
+                            <p class="text-[10px] font-medium text-slate-500 ">{{$detailBayi->nikBayi}}</p>
+                        </div>
+                        <div class="flex">
+                            <p class="text-[10px] font-medium text-slate-500 w-16">Tanggal Lahir</p>
+                            <p class="text-[10px] font-medium text-slate-500 px-2">:</p>
+                            <p class="text-[10px] font-medium text-slate-500 ">{{$detailBayi->tglLahirBayi}}</p>
+                        </div>
+                        <div class="flex">
+                            <p class="text-[10px] font-medium text-slate-500 w-16">Usia</p>
+                            <p class="text-[10px] font-medium text-slate-500 px-2">:</p>
+                            <p class="text-[10px] font-medium text-slate-500 ">{{$selisihBulan}} Bulan</p>
+                        </div>
+                        <div class="flex">
+                            <p class="text-[10px] font-medium text-slate-500 w-16">Jenis Kelamin</p>
+                            <p class="text-[10px] font-medium text-slate-500 px-2">:</p>
+                            <p class="text-[10px] font-medium text-slate-500 ">{{$detailBayi->jenisKelamin}}</p>
+                        </div>
+                    </div>
+                </div>
+            </form>
+
             {{-- tab navigation --}}
             <div role="tablist" aria-label="tabs"
                 class="relative w-max mx-auto h-10 grid grid-cols-2 items-center px-[3px] rounded-full bg-[#FFB0DE] overflow-hidden shadow-2xl shadow-900/20 transition">
@@ -38,15 +76,15 @@
                 </div>
                 <button role="tab" aria-selected="true" aria-controls="panel-1" id="tab-1" tabindex="0"
                     class="relative block h-10 px-6 tab rounded-full">
-                    <span class="text-white">Data</span>
+                    <span class="text-white">Penimbangan</span>
                 </button>
                 <button role="tab" aria-selected="false" aria-controls="panel-2" id="tab-2" tabindex="-1"
                     class="relative block h-10 px-6 tab rounded-full">
-                    <span class="text-white">Grafik</span>
+                    <span class="text-white">Perkembangan</span>
                 </button>
             </div>
 
-            {{-- card  --}}
+            {{-- card item --}}
             <div class="relative card bg-[#D981B4] mt-4 py-5 rounded-xl mx-8">
                 <div role="tabpanel" id="panel-1" class="tab-panel ">
                     {{-- tab name "Hasil Penimbangan" --}}
@@ -59,7 +97,7 @@
                             <label for="default-input" class="block mb-2 text-sm font-medium text-white">Tinggi Badan</label>
                             <div class="flex items-center">
                                 <input type="number" id="default-input"
-                                    class="bg-white border border-white text-white text-sm rounded-lg focus:ring-[#865BF4] focus:border-[#865BF4] block w-full p-2.5 dark:bg-white dark:border-white dark:placeholder-white dark:text-black dark:focus:ring-[#865BF4] dark:focus:border-[#865BF4]" placeholder="Tinggi Badan" name="tb" required>
+                                    class="bg-white border border-white text-white text-sm rounded-lg focus:ring-[#865BF4] focus:border-[#865BF4] block w-full p-2.5 dark:bg-white dark:border-white dark:placeholder-white dark:text-black dark:focus:ring-[#865BF4] dark:focus:border-[#865BF4]" placeholder="Tinggi Badan" name="tb" step=".01" required>
                                     <button class="m-2 rounded bg-[#FFB0DE] px-4 py-2 text-white font-bold" disabled>cm</button>
                             </div>
                         </div>
@@ -69,7 +107,7 @@
                             <label for="default-input" class="block mb-2 text-sm font-medium text-white">Berat Badan</label>
                             <div class="flex items-center">
                                 <input type="number" id="default-input"
-                                    class="bg-white border border-white text-white text-sm rounded-lg focus:ring-[#865BF4] focus:border-[#865BF4] block w-full p-2.5 dark:bg-white dark:border-white dark:placeholder-white dark:text-black dark:focus:ring-[#865BF4] dark:focus:border-[#865BF4]" placeholder="Berat Badan" name="bb" required>
+                                    class="bg-white border border-white text-white text-sm rounded-lg focus:ring-[#865BF4] focus:border-[#865BF4] block w-full p-2.5 dark:bg-white dark:border-white dark:placeholder-white dark:text-black dark:focus:ring-[#865BF4] dark:focus:border-[#865BF4]" placeholder="Berat Badan" name="bb" step=".01" required>
                                     <button class="m-2 rounded bg-[#FFB0DE] px-4 py-2 text-white font-bold" disabled>kg</button>
                             </div>
                         </div>
@@ -78,8 +116,8 @@
                         <div class="mb-3 mx-3">
                             <label for="default-input" class="block mb-2 text-sm font-medium text-white">Lingkar Kepala (opsional)</label>
                             <div class="flex items-center">
-                                <input type="number" id="default-input"
-                                    class="bg-white border border-white text-white text-sm rounded-lg focus:ring-[#865BF4] focus:border-[#865BF4] block w-full p-2.5 dark:bg-white dark:border-white dark:placeholder-white dark:text-black dark:focus:ring-[#865BF4] dark:focus:border-[#865BF4]" placeholder="Lingkar Kepala" name="lingkep">
+                                <input type="number" id="default-input" 
+                                    class="bg-white border border-white text-white text-sm rounded-lg focus:ring-[#865BF4] focus:border-[#865BF4] block w-full p-2.5 dark:bg-white dark:border-white dark:placeholder-white dark:text-black dark:focus:ring-[#865BF4] dark:focus:border-[#865BF4]" placeholder="Lingkar Kepala" name="lingkep" step=".01">
                                     <button class="m-2 rounded bg-[#FFB0DE] px-4 py-2 text-white font-bold" disabled>cm</button>
                             </div>
                         </div>
@@ -88,6 +126,11 @@
                         <div class="mb-3 mx-3">
                            <input type="hidden" value="{{ $detailBayi->id}}" name="bayi_id">
                         </div>
+
+                        {{-- get "usia bayi" --}}
+                        <div class="mb-3 mx-3">
+                            <input type="hidden" value="{{$selisihBulan}}" name="usiaBayi">
+                         </div>
 
                         {{-- textarea for "keterangan" --}}
                         <div class="mb-3 mx-3">
@@ -106,58 +149,32 @@
                     {{-- tab name "Grafik Perkembangan" --}}
                     <h1 class="font-bold text-center mb-3 text-white">Grafik Perkembangan</h1>
 
-                    {{-- identity --}}
-
-                    <form method="GET" action="#" enctype="multipart/form-data">
-                        @csrf
-                        {{-- name --}}
-                        <div class="mb-3 mx-3">
-                            <label for="default-input" class="block mb-2 text-sm font-medium text-white">Nama</label>
-                            <div class="flex items-center">
-                                <input type="text" id="disabled-input" aria-label="disabled input"
-                                    class="bg-white border border-white  text-sm rounded-lg focus:ring-[#865BF4] focus:border-[#865BF4] block w-full p-2.5 dark:bg-white dark:border-white dark:placeholder-white dark:text-black dark:focus:ring-[#865BF4] dark:focus:border-[#865BF4]" value="{{ $detailBayi->namaBayi}}" disabled>
-                            </div>
-                        </div>
-
-                        {{-- date of birth --}}
-                        <div class="mb-3 mx-3">
-                            <label for="default-input" class="block mb-2 text-sm font-medium text-white">Tanggal Lahir</label>
-                            <div class="flex items-center">
-                                <input type="date" id="disabled-input" aria-label="disabled input"
-                                    class="bg-white border border-white  text-sm rounded-lg focus:ring-[#865BF4] focus:border-[#865BF4] block w-full p-2.5 dark:bg-white dark:border-white dark:placeholder-white dark:text-black dark:focus:ring-[#865BF4] dark:focus:border-[#865BF4]" value="{{ $detailBayi->tglLahirBayi}}" disabled>
-                            </div>
-                        </div>
-
-                        {{-- age --}}
-                        <div class="mb-3 mx-3">
-                            <label for="default-input" class="block mb-2 text-sm font-medium text-white">Usia</label>
-                            <div class="flex items-center">
-                                <input type="text" id="disabled-input" aria-label="disabled input"
-                                    class="bg-white border border-white  text-sm rounded-lg focus:ring-[#865BF4] focus:border-[#865BF4] block w-full p-2.5 dark:bg-white dark:border-white dark:placeholder-white dark:text-black dark:focus:ring-[#865BF4] dark:focus:border-[#865BF4]" value="{{$selisihBulan}}" disabled>
-                                    <button class="m-2 rounded bg-[#FFB0DE] px-4 py-2 text-white font-bold" disabled>Bln</button>
-                            </div>
-                        </div>
-
-                        {{-- gender --}}
-                        <div class="mb-3 mx-3">
-                            <label for="default-input" class="block mb-2 text-sm font-medium text-white">Kelamin</label>
-                            <div class="flex items-center">
-                                <input type="tect" id="disabled-input" aria-label="disabled input"
-                                    class="bg-white border border-white  text-sm rounded-lg focus:ring-[#865BF4] focus:border-[#865BF4] block w-full p-2.5 dark:bg-white dark:border-white  dark:placeholder-white dark:text-black dark:focus:ring-[#865BF4] dark:focus:border-[#865BF4]" value="{{ $detailBayi->jenisKelamin}}" disabled>
-                            </div>
-                        </div>
-
-                        {{-- status --}}
-                        <div class="mb-3 mx-3">
-                            <label for="default-input" class="block mb-2 text-sm font-medium text-white">Status</label>
-                            <div class="flex items-center">
-                                <input type="tect" id="disabled-input" aria-label="disabled input"
-                                    class="bg-white border border-white  text-sm rounded-lg focus:ring-[#865BF4] focus:border-[#865BF4] block w-full p-2.5 dark:bg-white dark:border-white dark:placeholder-white dark:text-black dark:focus:ring-[#865BF4] dark:focus:border-[#865BF4]" value="Aman" disabled>
-                            </div>
-                        </div>
-                    </form>
+                    {{-- medical table --}}
+                    <div class="mb-3 mx-3">
+                        <table class="min-w-full text-left text-white text-sm font-white">
+                            <thead class="border-b font-medium dark:border-white">
+                              <tr>
+                                <th scope="col" class="px-3 py-2">Usia</th>
+                                <th scope="col" class="px-3 py-2">TB</th>
+                                <th scope="col" class="px-3 py-2">BB</th>
+                                <th scope="col" class="px-3 py-2">Status</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="border-b dark:border-white">
+                                    <td class="whitespace-nowrap px-3 py-2 font-medium">1</td>
+                                    <td class="whitespace-nowrap px-3 py-2">w</td>
+                                    <td class="whitespace-nowrap px-3 py-2">w</td>
+                                    <td class="whitespace-nowrap px-3 py-2">e</td>
+                                  </tr>
+                            </tbody>
+                          </table>
+                    </div>
+                     
                 </div>
-            </div>
+            </div> 
+
+        
         </div>
     </section>
     <script src="{{asset('user/tab-content.js')}}"></script>
