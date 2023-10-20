@@ -15,8 +15,15 @@ class KesehatanBayiController extends Controller
         $dataKesehatanBayi->beratBadanBayi = $request->bb;
         $dataKesehatanBayi->lingkarKepala = $request->lingkep;
         $dataKesehatanBayi->keterangan = $request->ket;
+        $dataKesehatanBayi->usiaBayi = $request->usiaBayi;
         $dataKesehatanBayi->bayi_id = $request->bayi_id;
         $dataKesehatanBayi->save();
         return redirect()->route('dataBayi.view');
+    }
+
+    // function for show "data kesehatan bayi"
+    public function viewKesehatanBayi($id){
+        $dataKesehatanBayi = KesehatanBayi::find($id)->get();
+        return view('admin.dataKesehatanAnak', compact('dataKesehatanBayi'));
     }
 }

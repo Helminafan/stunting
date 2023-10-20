@@ -13,10 +13,11 @@ return new class extends Migration
     {
         Schema::create('kesehatanbayi', function (Blueprint $table) {
             $table->id();
-            $table->double('tinggiBadanBayi', 8, 2);
-            $table->double('beratBadanBayi', 8, 2);
-            $table->double('lingkarKepala', 8, 2);
-            $table->string('keterangan')->nullable();
+            $table->integer('usiaBayi');
+            $table->float('tinggiBadanBayi', 8, 2);
+            $table->float('beratBadanBayi', 8, 2);
+            $table->float('lingkarKepala', 8, 2);
+            $table->text('keterangan')->nullable();
             $table->string('status')->default('normal');
             $table->unsignedBigInteger('bayi_id');
             $table->foreign('bayi_id')->references('id')->on('bayi')->onDelete('cascade')->onUpdate('cascade');
