@@ -91,11 +91,16 @@ Route::group(['prefix' => 'kader', 'middleware' => [
     Route::get('/kalender', [KalenderController::class, 'index'])->name('kalender');
     Route::get('/tambahData', [BayiController::class, 'tambahDataBayi'])->name('tambahData.view');
     Route::get('/dataAnak', [BayiController::class, 'daftarBayi'])->name('dataBayi.view');
+    Route::get('/showDataAnak', [BayiController::class, 'showBayi'])->name('showBayi.view');
     Route::post('/storeDataAnak', [BayiController::class, 'simpanDataBayi'])->name('dataBayi.store');
     Route::get('/detailData/{id}', [BayiController::class, 'detailDataBayi'])->name('detailData.edit');
+    Route::get('/editData/{id}', [BayiController::class, 'editDataBayi'])->name('editData.view');
     Route::post('/storeKesehatanBayi', [KesehatanBayiController::class, 'tambahDataKesehatanBayi'])->name('kesehatanBayi.store');
     Route::get('/akun', function () {
         return view('admin.akun');
+    });
+    Route::get('/editData', function () {
+        return view('admin.editData');
     });
     Route::get('/dataKesehatanAnak', function () {
         return view('admin.dataKesehatanAnak');

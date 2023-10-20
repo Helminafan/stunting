@@ -16,6 +16,11 @@ class BayiController extends Controller
         $dataBayi['allDataBayi'] = Bayi::all();
         return view('admin.dataAnak', $dataBayi);
     }
+    public function showBayi()
+    {
+        $dataBayi['allDataBayi'] = Bayi::all();
+        return view('admin.showAnak', $dataBayi);
+    }
 
     // function for show "tambahData" view
     public function tambahDataBayi()
@@ -37,7 +42,22 @@ class BayiController extends Controller
         $dataBayi->save();
         return redirect()->route('dataBayi.view');
     }
-
+    public function editDataBayi($id){
+        $data = Bayi::find($id);
+        $dataIbu = Ibu::all();
+        return view('admin.editdata',compact('data','dataIbu'));
+    }
+    public function updateDataBayi(Request $request, string $id){
+        $dataBayi = Bayi::find($id);
+        $dataBayi->nikBayi = $request->nikBayi;
+        $dataBayi->namaBayi = $request->namaBayi;
+        $dataBayi->tglLahirBayi = $request->tglLahirBayi;
+        $dataBayi->tmptLahirBayi = $request->tmptLahirBayi;
+        $dataBayi->jenisKelamin = $request->jenisKelamin;
+        $dataBayi->ibu_id = $request->ibu_id;
+        $dataBayi->update();
+        return redirect()->route('dataBayi.view');
+    }
     // function for view "detailbayi"
     public function detailDataBayi($id)
     {
