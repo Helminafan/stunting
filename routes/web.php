@@ -4,6 +4,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\KalenderController;
 use App\Http\Controllers\OrangTuaController;
 use App\Http\Controllers\BayiController;
+use App\Http\Controllers\KesehatanBayiController;
 use App\Http\Controllers\RoleController;
 use Illuminate\Support\Facades\Route;
 use Laravel\Jetstream\Rules\Role;
@@ -92,7 +93,7 @@ Route::group(['prefix' => 'kader', 'middleware' => [
     Route::get('/dataAnak', [BayiController::class, 'daftarBayi'])->name('dataBayi.view');
     Route::post('/storeDataAnak', [BayiController::class, 'simpanDataBayi'])->name('dataBayi.store');
     Route::get('/detailData/{id}', [BayiController::class, 'detailDataBayi'])->name('detailData.edit');
-
+    Route::post('/storeKesehatanBayi', [KesehatanBayiController::class, 'tambahDataKesehatanBayi'])->name('kesehatanBayi.store');
     Route::get('/akun', function () {
         return view('admin.akun');
     });

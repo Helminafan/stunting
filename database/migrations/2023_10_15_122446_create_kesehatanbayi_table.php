@@ -16,8 +16,8 @@ return new class extends Migration
             $table->double('tinggiBadanBayi', 8, 2);
             $table->double('beratBadanBayi', 8, 2);
             $table->double('lingkarKepala', 8, 2);
-            $table->string('keterangan');
-            $table->string('status');
+            $table->string('keterangan')->nullable();
+            $table->string('status')->default('normal');
             $table->unsignedBigInteger('bayi_id');
             $table->foreign('bayi_id')->references('id')->on('bayi')->onDelete('cascade')->onUpdate('cascade');
             $table->timestamps();
