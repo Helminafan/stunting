@@ -69,7 +69,7 @@
         </a>
 
     </div>
-    <a href="{{ route('logout') }}">
+    <a href="{{ url('/auth/logout') }}">
         <div class="bg-[#865BF4] mx-5 text-center rounded-xl py-2 text-white">
             <h1 class="mx-auto ">log out</h1>
         </div>

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Bayi;
 use App\Models\Ibu;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
 use Carbon\Carbon;
 
@@ -15,11 +16,6 @@ class BayiController extends Controller
     {
         $dataBayi['allDataBayi'] = Bayi::all();
         return view('admin.dataAnak', $dataBayi);
-    }
-    public function showBayi()
-    {
-        $dataBayi['allDataBayi'] = Bayi::all();
-        return view('admin.showAnak', $dataBayi);
     }
 
     // function for show "tambahData" view
@@ -42,11 +38,15 @@ class BayiController extends Controller
         $dataBayi->save();
         return redirect()->route('dataBayi.view');
     }
+
+    // function for view "edit data bayi"
     public function editDataBayi($id){
         $data = Bayi::find($id);
         $dataIbu = Ibu::all();
         return view('admin.editdata',compact('data','dataIbu'));
     }
+
+    // function for update "data bayi"
     public function updateDataBayi(Request $request, string $id){
         $dataBayi = Bayi::find($id);
         $dataBayi->nikBayi = $request->nikBayi;
@@ -58,6 +58,7 @@ class BayiController extends Controller
         $dataBayi->update();
         return redirect()->route('dataBayi.view');
     }
+
     // function for view "detailbayi"
     public function detailDataBayi($id)
     {
