@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('nikBayi');
             $table->string('namaBayi');
             $table->date('tglLahirBayi');
-            $table->string('tglLahirBayi');
+            $table->string('tmptLahirBayi');
             $table->string('jenisKelamin');
             $table->unsignedBigInteger('ibu_id');
             $table->foreign('ibu_id')->references('id')->on('ibu')->onDelete('cascade')->onUpdate('cascade');
