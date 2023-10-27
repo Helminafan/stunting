@@ -97,7 +97,7 @@
                             <label for="default-input" class="block mb-2 text-sm font-medium text-white">Tinggi Badan</label>
                             <div class="flex items-center">
                                 <input type="number" id="default-input"
-                                    class="bg-white border border-white text-white text-sm rounded-lg focus:ring-[#865BF4] focus:border-[#865BF4] block w-full p-2.5 dark:bg-white dark:border-white dark:placeholder-white dark:text-black dark:focus:ring-[#865BF4] dark:focus:border-[#865BF4]" placeholder="Tinggi Badan" name="tb" step=".01" required>
+                                    class="bg-white border border-white  text-sm rounded-lg focus:ring-[#865BF4] focus:border-[#865BF4] block w-full p-2.5 dark:bg-white dark:border-white dark:placeholder-white dark:text-black dark:focus:ring-[#865BF4] dark:focus:border-[#865BF4]" placeholder="Tinggi Badan" name="tb" step=".01" required>
                                     <button class="m-2 rounded bg-[#FFB0DE] px-4 py-2 text-white font-bold" disabled>cm</button>
                             </div>
                         </div>
@@ -107,7 +107,7 @@
                             <label for="default-input" class="block mb-2 text-sm font-medium text-white">Berat Badan</label>
                             <div class="flex items-center">
                                 <input type="number" id="default-input"
-                                    class="bg-white border border-white text-white text-sm rounded-lg focus:ring-[#865BF4] focus:border-[#865BF4] block w-full p-2.5 dark:bg-white dark:border-white dark:placeholder-white dark:text-black dark:focus:ring-[#865BF4] dark:focus:border-[#865BF4]" placeholder="Berat Badan" name="bb" step=".01" required>
+                                    class="bg-white border border-white  text-sm rounded-lg focus:ring-[#865BF4] focus:border-[#865BF4] block w-full p-2.5 dark:bg-white dark:border-white dark:placeholder-white dark:text-black dark:focus:ring-[#865BF4] dark:focus:border-[#865BF4]" placeholder="Berat Badan" name="bb" step=".01" required>
                                     <button class="m-2 rounded bg-[#FFB0DE] px-4 py-2 text-white font-bold" disabled>kg</button>
                             </div>
                         </div>
@@ -117,7 +117,7 @@
                             <label for="default-input" class="block mb-2 text-sm font-medium text-white">Lingkar Kepala (opsional)</label>
                             <div class="flex items-center">
                                 <input type="number" id="default-input" 
-                                    class="bg-white border border-white text-white text-sm rounded-lg focus:ring-[#865BF4] focus:border-[#865BF4] block w-full p-2.5 dark:bg-white dark:border-white dark:placeholder-white dark:text-black dark:focus:ring-[#865BF4] dark:focus:border-[#865BF4]" placeholder="Lingkar Kepala" name="lingkep" step=".01">
+                                    class="bg-white border border-white  text-sm rounded-lg focus:ring-[#865BF4] focus:border-[#865BF4] block w-full p-2.5 dark:bg-white dark:border-white dark:placeholder-white dark:text-black dark:focus:ring-[#865BF4] dark:focus:border-[#865BF4]" placeholder="Lingkar Kepala" name="lingkep" step=".01">
                                     <button class="m-2 rounded bg-[#FFB0DE] px-4 py-2 text-white font-bold" disabled>cm</button>
                             </div>
                         </div>

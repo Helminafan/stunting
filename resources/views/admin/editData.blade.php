@@ -18,7 +18,7 @@
             {{-- heading teks card --}}
             <h1 class="font-bold text-center mb-3 text-white">Edit Data Bayi</h1>
 
-            <form class="bayi" method="POST" action="{{ route('dataBayi.store') }}" enctype="multipart/form-data">
+            <form class="bayi" method="POST" action="{{ route('kesehatanBayi.update',$data->id) }}" enctype="multipart/form-data">
                 @csrf
                 {{-- input for "nik bayi" type text --}}
                 <div class="mb-3 mx-3">
@@ -55,7 +55,7 @@
                 <div class="mb-3 mx-3">
                     <label for="default-input" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">TempatLahir</label>
                     <div class="flex items-center">
-                        <input type="text" value="{{$data->tglLahirBayi}}" id="default-input"
+                        <input type="text" value="{{$data->tmptLahirBayi}}" id="default-input"
                             class="bg-white border border-white  text-sm rounded-lg focus:ring-[#865BF4] focus:border-[#865BF4] block w-full p-2.5 dark:bg-white dark:border-white dark:text-black dark:focus:ring-[#865BF4] dark:focus:border-[#865BF4]"
                             placeholder="Tempat Lahir" name="tmptLahirBayi" required>
                     </div>

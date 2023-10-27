@@ -63,9 +63,14 @@ class BayiController extends Controller
     public function detailDataBayi($id)
     {
         $detailBayi = Bayi::find($id);
-        $tanggalLahir = Carbon::parse($detailBayi->tglLahirBayi);
-        $tanggalSekarang = Carbon::now();
-        $selisihBulan = $tanggalLahir->diffInMonths($tanggalSekarang);
-        return view('admin.dataKesehatanAnak', compact('detailBayi', 'selisihBulan'));
+        if ($detailBayi) {
+            $tanggalLahir = Carbon::parse($detailBayi->tglLahirBayi);
+            $tanggalSekarang = Carbon::now();
+            $selisihBulan = $tanggalLahir->diffInMonths($tanggalSekarang);
+            return view('admin.dataKesehatanAnak', compact('detailBayi', 'selisihBulan'));
+        } else {
+            // Handle ketika data bayi tidak ditemukan, misalnya dengan menampilkan pesan kesalahan.
+            return redirect()->route('dashboard')->with('error', 'Data bayi tidak ditemukan.');
+        }
     }
 }

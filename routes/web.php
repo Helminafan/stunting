@@ -96,6 +96,7 @@ Route::group(['prefix' => 'kader', 'middleware' => [
     Route::get('/detailData/{id}', [BayiController::class, 'detailDataBayi'])->name('detailData.edit');
     Route::get('/editData/{id}', [BayiController::class, 'editDataBayi'])->name('editData.view');
     Route::post('/storeKesehatanBayi', [KesehatanBayiController::class, 'tambahDataKesehatanBayi'])->name('kesehatanBayi.store');
+    Route::post('/updateKesehatanBayi/{id}', [BayiController::class, 'updateDataBayi'])->name('kesehatanBayi.update');
     Route::get('/akun', function () {
         return view('admin.akun');
     });
