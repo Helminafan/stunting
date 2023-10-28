@@ -23,6 +23,9 @@ use Laravel\Jetstream\Rules\Role;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/coba', function () {
+    return view('user.coba');
+});
 Route::middleware(['AyahAccess', 'auth:sanctum', config('jetstream.auth_session', 'verified')])->group(function () {
     Route::get('dataAyah', [OrangTuaController::class, 'create_ayah'])->name('create_ayah');
     Route::post('/storeAyah', [OrangTuaController::class, 'storeAyah'])->name('storeAyah');
@@ -39,6 +42,7 @@ Route::group(['prefix' => 'user', 'middleware' => [
     'verified',
 ]], function () {
     Route::get('/home', [OrangTuaController::class,'homeDashboard'])->name('user.home');
+    Route::post('/editPassword/{id}',[AuthController::class,'gantiPassword'])->name('update_password');
     Route::get('/bayi', function () {
         return view('user.bayi');
     });
@@ -75,7 +79,7 @@ Route::group(['prefix' => 'user', 'middleware' => [
     Route::get('/akunsaya/editprofil', function () {
         return view('user.editprofil');
     });
-    Route::get('/akunsaya/gantipass', function () {
+    Route::get('/akunsaya/gantipass/{id}', function () {
         return view('user.gantipassword');
     });
 });

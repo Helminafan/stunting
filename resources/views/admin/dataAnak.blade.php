@@ -18,7 +18,7 @@
 
     <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
         <div class="flex flex-col">
-            <form action="{{ route('dataBayi.search') }}" method="GET">   
+            <form action="" method="GET">   
                 <label for="default-search" class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-grey-900">Search</label>
                 <div class="relative">
                     <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">

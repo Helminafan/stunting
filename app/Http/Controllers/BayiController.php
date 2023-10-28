@@ -17,6 +17,11 @@ class BayiController extends Controller
         $dataBayi['allDataBayi'] = Bayi::all();
         return view('admin.dataAnak', $dataBayi);
     }
+    public function showBayi()
+    {
+        $dataBayi['allDataBayi'] = Bayi::all();
+        return view('admin.showAnak', $dataBayi);
+    }
 
     // function for show "tambahData" view
     public function tambahDataBayi()

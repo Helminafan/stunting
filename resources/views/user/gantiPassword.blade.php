@@ -25,36 +25,41 @@
                     </a>
                 </div>
             </div>
-            <div class="relative card bg-[#D981B4] mt-4 py-5 rounded-xl mx-8">
-                <h1 class="font-bold text-center mb-3 text-white">Ganti Password</h1>
-                <div class="mb-3 mx-3">
-                    <label for="default-input"
-                        class="block mb-2 text-sm font-medium text-white">Password Lama</label>
-                    <div class="flex items-center">
-                        <input type="password" id="default-input"
-                            class="bg-white border border-white text-white text-sm rounded-lg focus:ring-[#865BF4] focus:border-[#865BF4] block w-full p-2.5 dark:bg-white dark:border-white dark:text-black dark:focus:ring-[#865BF4] dark:focus:border-[#865BF4]" placeholder="Password Lama">
+            <form action="{{route('update_password',Auth::user()->id)}}" method="POST">
+                @csrf
+                <div class="relative card bg-[#D981B4] mt-4 py-5 rounded-xl mx-8">
+                    <h1 class="font-bold text-center mb-3 text-white">Ganti Password</h1>
+                    <div class="mb-3 mx-3">
+                        <label for="default-input" class="block mb-2 text-sm font-medium text-white">Password
+                            Lama</label>
+                        <div class="flex items-center">
+                            <input type="password" id="default-input"
+                               name="oldPassword" class="bg-white border border-white text-sm rounded-lg focus:ring-[#865BF4] focus:border-[#865BF4] block w-full p-2.5 dark:bg-white dark:border-white dark:text-black dark:focus:ring-[#865BF4] dark:focus:border-[#865BF4]"
+                                placeholder="Password Lama">
+                        </div>
+                    </div>
+                    <div class="mb-3 mx-3"><label for="default-input"
+                            class="block mb-2 text-sm font-medium text-white">Password Baru</label>
+                        <div class="flex items-center">
+                            <input type="password" id="default-input"
+                               name="newPassword" class="bg-white border border-white text-sm rounded-lg focus:ring-[#865BF4] focus:border-[#865BF4] block w-full p-2.5 dark:bg-white dark:border-white dark:text-black dark:focus:ring-[#865BF4] dark:focus:border-[#865BF4]"
+                                placeholder="Password Baru">
+                        </div>
+                    </div>
+                    <div class="mb-3 mx-3">
+                        <label for="default-input" class="block mb-2 text-sm font-medium text-white">Konfirmasi</label>
+                        <div class="flex items-center">
+                            <input type="password" id="default-input"
+                                class="bg-white border border-white text-sm rounded-lg focus:ring-[#865BF4] focus:border-[#865BF4] block w-full p-2.5 dark:bg-white dark:border-white dark:text-black dark:focus:ring-[#865BF4] dark:focus:border-[#865BF4]"
+                               name="reenter_password" placeholder="Konfirmasi Password Baru">
+                        </div>
+                    </div>
+                    <div class=" mx-3">
+                        <button type="submit"
+                            class=" w-full text-white bg-[#865BF4] hover:bg-[#865BF4] focus:outline-none focus:ring-4 focus:ring-[#865BF4] font-medium rounded-full text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:bg-[#865BF4] dark:hover:bg-[#865BF4]dark:focus:ring-[#865BF4]">Simpan</button>
                     </div>
                 </div>
-                <div class="mb-3 mx-3"><label for="default-input"
-                    class="block mb-2 text-sm font-medium text-white">Password Baru</label>
-                    <div class="flex items-center">
-                        <input type="password" id="default-input"
-                            class="bg-white border border-white text-white text-sm rounded-lg focus:ring-[#865BF4] focus:border-[#865BF4] block w-full p-2.5 dark:bg-white dark:border-white dark:text-black dark:focus:ring-[#865BF4] dark:focus:border-[#865BF4]" placeholder="Password Baru">
-                    </div>
-                </div>
-                <div class="mb-3 mx-3">
-                    <label for="default-input"
-                        class="block mb-2 text-sm font-medium text-white">Konfirmasi</label>
-                    <div class="flex items-center">
-                        <input type="password" id="default-input"
-                            class="bg-white border border-white text-white text-sm rounded-lg focus:ring-[#865BF4] focus:border-[#865BF4] block w-full p-2.5 dark:bg-white dark:border-white dark:text-black dark:focus:ring-[#865BF4] dark:focus:border-[#865BF4]" placeholder="Konfirmasi Password Baru">
-                    </div>
-                </div>
-                <div class=" mx-3">
-                    <button type="button"
-                        class=" w-full text-white bg-[#865BF4] hover:bg-[#865BF4] focus:outline-none focus:ring-4 focus:ring-[#865BF4] font-medium rounded-full text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:bg-[#865BF4] dark:hover:bg-[#865BF4]dark:focus:ring-[#865BF4]">Simpan</button>
-                </div>
-            </div>
+            </form>
     </section>
 </body>
 

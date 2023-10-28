@@ -60,8 +60,8 @@
                 class=" w-full text-white bg-[#865BF4] hover:bg-[#865BF4] focus:outline-none focus:ring-4 focus:ring-[#865BF4] font-medium rounded-full text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:bg-[#865BF4] dark:hover:bg-[#865BF4]dark:focus:ring-[#865BF4]">Ganti Kontak</button>
             </a>
         </div>
-        <div class=" mx-3">
-            <a href="{{ url('/user/akunsaya/gantipass') }}">
+        <div class=" mx-3 mb-20">
+            <a href="{{ url('/user/akunsaya/gantipass',Auth::user()->id) }}">
                 <button type="button"
                 class=" w-full text-white bg-[#D981B4] hover:bg-[#D981B4] focus:outline-none focus:ring-4 focus:ring-[#D981B4] font-medium rounded-full text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:bg-[#D981B4] dark:hover:bg-[#D981B4]dark:focus:ring-[#D981B4]">Ganti Password</button>
             </a>
