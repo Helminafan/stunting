@@ -3,7 +3,7 @@
     <div class="h-28 bg-[#D981B4] rounded-b-[60px]">
         <div class="flex justify-between items-center mx-6 pt-4">
             <div class="text-white">
-                <h1 class="font-bold text-lg">Stunting</h1>
+                <h1 class="font-bold text-lg">Nosting</h1>
             </div>
             <div class="text-white">
                 <a href="{{route('showBayi.view')}}">
@@ -48,7 +48,7 @@
                             style="background-image: url({{ asset('kader/foto/baby.png') }});"></div>
                         <div>
                             <h2 class="font-bold text-xs">{{ $row->namaBayi }}</h2>
-                            <h2 class="font-extralight text-xs">Biodata bayi yang bersangkutan</h2>
+                            <h2 class="font-extralight text-xs">Ketuk untuk melihat detail</h2>
                         </div>
                     </div>
                 </div>

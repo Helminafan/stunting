@@ -17,34 +17,34 @@
                     <div class="mb-3 mx-3">
                         <label for="default-input" class="block mb-2  text-white text-sm font-medium">Kegiatan</label>
                         <input type="text" name="kegiatan" id="default-input"
-                            class=" text-green-700 text-sm rounded-lg w-full">
+                            class=" text-gray-700 text-sm rounded-lg w-full">
                     </div>
                     <div class="mb-3 mx-3">
                         <label for="default-input" class="block mb-2  text-white text-sm font-medium ">Tanggal</label>
                         <input type="date" name="tanggal" id="default-input"
-                            class=" text-green-700 text-sm rounded-lg w-full">
+                            class=" text-gray-700 text-sm rounded-lg w-full">
                     </div>
                     <div class="mb-3 mx-3">
                         <label for="default-input"class="block mb-2  text-white text-sm font-medium ">Waktu
                         </label>
                         <input type="time" name="waktu" id="default-input"
-                            class=" text-green-700 text-sm rounded-lg w-full">
+                            class=" text-gray-700 text-sm rounded-lg w-full">
                     </div>
                     <div class="mb-3 mx-3">
                         <label for="default-input"class="block mb-2  text-white text-sm font-medium ">Tempat
                         </label>
                         <input type="text" name="tempat" id="default-input"
-                            class=" text-green-700 text-sm rounded-lg w-full">
+                            class=" text-gray-700 text-sm rounded-lg w-full">
                     </div>
                     <div class="mb-3 mx-3">
                         <label for="default-input"class="block mb-2  text-white text-sm font-medium ">Alamat
                         </label>
-                        <textarea  name="alamat" id="" class=" text-green-700 text-sm rounded-lg w-full"></textarea>
+                        <textarea  name="alamat" id="" class=" text-gray-700 text-sm rounded-lg w-full"></textarea>
                         {{-- <input type="text" id="default-input" class=""> --}}
                     </div>
                     <div class=" mx-3">
                         <button type="submit"
-                            class=" w-full text-white bg-[#865BF4] hover:bg-[#7D4BFB] focus:outline-none focus:ring-4 focus:ring-green-300 font-medium rounded-full text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:bg-[#865BF4] dark:hover:bg-[#865BF4]dark:focus:ring-green-800">Simpan</button>
+                            class=" w-full text-white bg-[#865BF4] hover:bg-[#7D4BFB] focus:outline-none focus:ring-4 focus:ring-[#D981B4] font-medium rounded-full text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:bg-[#865BF4] dark:hover:bg-[#865BF4]dark:focus:ring-green-800">Simpan</button>
                     </div>
                 </form>
             </div>

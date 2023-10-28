@@ -3,10 +3,7 @@
     <div class="h-28 bg-[#D981B4] rounded-b-[60px] relative">
         <div class="flex justify-between items-center mx-6 pt-4">
             <div class="text-white">
-                <h1 class="font-bold text-lg">Stunting</h1>
-            </div>
-            <div class="text-white">
-                <i class="fa-solid fa-bell"></i>
+                <h1 class="font-bold text-lg">Nosting</h1>
             </div>
         </div>
         <div class="bg-white rounded-3xl shadow-xl absolute -bottom-12 w-[250px] left-1/2 -translate-x-1/2">

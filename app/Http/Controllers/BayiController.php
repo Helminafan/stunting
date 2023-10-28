@@ -23,6 +23,13 @@ class BayiController extends Controller
         return view('admin.showAnak', $dataBayi);
     }
 
+    //function for show data bayi to edit
+    public function showBayi()
+    {
+        $dataBayi['allDataBayi'] = Bayi::all();
+        return view('admin.showAnak', $dataBayi);
+    }
+
     // function for show "tambahData" view
     public function tambahDataBayi()
     {

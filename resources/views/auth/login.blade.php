@@ -157,7 +157,7 @@
                 <form method="POST" action="{{ route('login') }}">
                     @csrf
                    <div class="input-field">
-                    <input type="tel" id="telp" name="telp" placeholder="telp" required>
+                    <input type="tel" id="telp" name="telp" placeholder="No Telepon" required>
                     <i class="uil uil-phone"></i>
                    </div>
                    <div class="input-field">
