@@ -3,10 +3,7 @@
 <div class="h-36 bg-[#D981B4] rounded-b-[60px] relative">
     <div class="flex justify-between items-center mx-6 pt-4">
         <div class="text-white">
-            <h1 class="font-bold text-lg">Stunting</h1>
-        </div>
-        <div class="text-white">
-            <i class="fa-solid fa-bell"></i>
+            <h1 class="font-bold text-lg">Nosting</h1>
         </div>
     </div>
     <div class="bg-white rounded-3xl shadow-xl absolute -bottom-7 w-[250px] left-1/2 -translate-x-1/2">
@@ -26,14 +23,6 @@
         <div class="flex items-center py-2 justify-between border-b-2 text-[#D981B4] px-6">
             <i class="fa-solid fa-user-nurse w-7"></i>
             <h1 class="grow">Akun saya</h1>
-            <i class="fa-solid fa-chevron-right"></i>
-        </div>
-    </a>
-   
-    <a href="">
-        <div class="flex items-center py-2 justify-between border-b-2 text-[#D981B4] px-6">
-            <i class="fa-solid fa-file-medical w-7"></i>
-            <h1 class="grow">Dokumen Posyandu</h1>
             <i class="fa-solid fa-chevron-right"></i>
         </div>
     </a>
@@ -57,7 +46,7 @@
 </div>
 <a href="{{ route('admin.logout') }}">
     <div class="bg-[#865BF4] mx-5 text-center rounded-xl py-2 text-white">
-        <h1 class="mx-auto ">log out</h1>
+        <h1 class="mx-auto ">Keluar</h1>
     </div>
 </a>
 @endsection

@@ -12,6 +12,6 @@ class Bayi extends Model
     protected $primaryKey = 'id';
 
     public function ibuBayi(){
-        return $this->belongsTo(Ibu::class,'ibu_id','id');
+        return $this->hasMany(Ibu::class, 'ibu_id','id');
     }
 }

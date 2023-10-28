@@ -4,7 +4,7 @@
     <div class="h-36 bg-[#D981B4] rounded-b-[60px] relative">
         <div class="flex justify-between items-center mx-6 pt-4">
             <div class="text-white">
-                <h1 class="font-medium text-lg">Stunting</h1>
+                <h1 class="font-medium text-lg">Nosting</h1>
             </div>
         </div>
         <div class="bg-white rounded-3xl shadow-xl absolute -bottom-7 w-[250px] left-1/2 -translate-x-1/2">
@@ -71,7 +71,7 @@
     </div>
     <a href="{{ url('/auth/logout') }}">
         <div class="bg-[#865BF4] mx-5 text-center rounded-xl py-2 text-white">
-            <h1 class="mx-auto ">log out</h1>
+            <h1 class="mx-auto ">Keluar</h1>
         </div>
     </a>
 
