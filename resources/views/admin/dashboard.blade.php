@@ -25,7 +25,7 @@
         <div class="bg-white  p-4 rounded-xl shadow-xl">
             <h1 class="text-[14px]">Jumlah Anak</h1>
             <div class="flex">
-                <h1 class="text-[30px]">203</h1>
+                <h1 class="text-[30px]">{{DB::table('bayi')->count()}}</h1>
                 <img src="{{ asset('kader/foto/bayi.png') }}" alt="">
             </div>
         </div>
@@ -60,26 +60,4 @@
             </div>
         </div>
     </div>
-    <div class="text-gray-600  mx-6 mb-5">
-        <div class="flex justify-between">
-            <h1>Artikel</h1>
-            <a href="" class="text-green-500"><i class="fa-solid fa-circle-plus"></i> Tambah Data</a>
-        </div>
-
-        <hr class="border-gray-500 ">
-    </div>
-    <div class="container mb-20">
-        <div class="mx-auto px-6 ">
-            <div class="rounded bg-white shadow-lg overflow-hidden">
-                <img src="https://source.unsplash.com/600x400" alt="">
-                <div class="mx-3 py-3">
-                    <div class="font-bold mb-2 text-slate-700">
-                        Artikel Titel
-                    </div>
-                    <p class="text-sm text-slate-500">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Necessitatibus, ut. Maxime amet illum quo vitae </p>
-                </div>
-            </div>
-        </div>
-    </div> 
 @endsection

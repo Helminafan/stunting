@@ -21,7 +21,7 @@ use Laravel\Jetstream\Rules\Role;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('auth/login');
 });
 Route::get('/coba', function () {
     return view('user.coba');

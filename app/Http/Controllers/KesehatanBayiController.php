@@ -13,7 +13,6 @@ class KesehatanBayiController extends Controller
         $dataKesehatanBayi = new KesehatanBayi();
         $dataKesehatanBayi->tinggiBadanBayi = $request->tb;
         $dataKesehatanBayi->beratBadanBayi = $request->bb;
-        $dataKesehatanBayi->lingkarKepala = $request->lingkep;
         $dataKesehatanBayi->keterangan = $request->ket;
         $dataKesehatanBayi->usiaBayi = $request->usiaBayi;
         $dataKesehatanBayi->bayi_id = $request->bayi_id;
