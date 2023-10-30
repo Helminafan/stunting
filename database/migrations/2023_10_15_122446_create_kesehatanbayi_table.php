@@ -16,7 +16,6 @@ return new class extends Migration
             $table->integer('usiaBayi');
             $table->float('tinggiBadanBayi', 8, 2);
             $table->float('beratBadanBayi', 8, 2);
-            $table->float('lingkarKepala', 8, 2);
             $table->text('keterangan')->nullable();
             $table->string('status')->default('normal');
             $table->unsignedBigInteger('bayi_id');
