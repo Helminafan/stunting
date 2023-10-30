@@ -134,9 +134,7 @@
 
                         {{-- input for "lingkar kepala" type number --}}
                         <div class="mb-3 mx-3">
-                            <label for="default-input" class="block mb-2 text-sm font-medium text-white">Lingkar
-                                Kepala
-                                (opsional)</label>
+                            <label for="default-input" class="block mb-2 text-sm font-medium text-white">Jenis Kelamin</label>
                             <div class="flex items-center">
                                 <select disabled
                                     class="bg-white border border-white  text-sm rounded-lg focus:ring-[#865BF4] focus:border-[#865BF4] block w-full p-2.5 dark:bg-white dark:border-white dark:text-black dark:focus:ring-[#865BF4] dark:focus:border-[#865BF4]"
@@ -147,8 +145,6 @@
                                     <option value="cewek"
                                         {{ $detailBayi->jenisKelamin == 'Perempuan' ? 'selected' : '' }}>Perempuan </option>
                                 </select>
-                                <button class="m-2 rounded bg-[#FFB0DE] px-4 py-2 text-white font-bold"
-                                    disabled>cm</button>
                             </div>
                         </div>
 
