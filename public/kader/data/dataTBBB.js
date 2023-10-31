@@ -8,6 +8,7 @@ function hitungStunting() {
         hitungTinggiBadan(tinggiAnak, usiaAnak, jenisKelamin, function (tinggiZScore) {
             var statusGizi = nilaiGizi(beratZScore);
             var statusStunting = nilaiStunting(tinggiZScore);
+            hasil(tinggiZScore);
             // Menampilkan hasil di textarea
             var textarea = document.getElementById("hasil");
             textarea.value = "Z-Score Berat Badan: " + beratZScore + "\n";
@@ -107,5 +108,19 @@ function nilaiStunting(zScore) {
         return " dengan kategori normal berlebih";
     } else {
         return "Status Stunting Tidak Diketahui";
+    }
+}
+function hasil(zScore) {
+    var status = document.getElementById("status");
+    if (zScore < -3) {
+        status.value = "stunting";
+    } else if (zScore >= -3 && zScore < -2) {
+        status.value = "stunting";
+    } else if (zScore >= -2 && zScore <= 1) {
+        status.value = "normal";
+    } else if (zScore > 1) {
+        status.value = "normal";
+    } else {
+        "Status Stunting Tidak Diketahui";
     }
 }

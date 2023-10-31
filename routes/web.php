@@ -6,6 +6,8 @@ use App\Http\Controllers\OrangTuaController;
 use App\Http\Controllers\BayiController;
 use App\Http\Controllers\KesehatanBayiController;
 use App\Http\Controllers\RoleController;
+use App\Models\Bayi;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Route;
 use Laravel\Jetstream\Rules\Role;
 
@@ -24,6 +26,17 @@ Route::get('/', function () {
     return view('auth/login');
 });
 Route::get('/coba', function () {
+    $jumlahBayiStunting = Bayi::whereHas('kesehatanBayi', function ($query) {
+        $query->where('status', 'stunting')
+            ->where('id', function ($subquery) {
+                $subquery->from('kesehatanbayi')
+                    ->select('id')
+                    ->whereRaw('bayi.id = kesehatanbayi.bayi_id')
+                    ->orderBy('id', 'desc')
+                    ->limit(1);
+            });
+    })->count();
+    dd($jumlahBayiStunting);
     return view('user.coba');
 });
 Route::middleware(['AyahAccess', 'auth:sanctum', config('jetstream.auth_session', 'verified')])->group(function () {
@@ -41,8 +54,8 @@ Route::group(['prefix' => 'user', 'middleware' => [
     config('jetstream.auth_session'),
     'verified',
 ]], function () {
-    Route::get('/home', [OrangTuaController::class,'homeDashboard'])->name('user.home');
-    Route::post('/editPassword/{id}',[AuthController::class,'gantiPassword'])->name('update_password');
+    Route::get('/home', [OrangTuaController::class, 'homeDashboard'])->name('user.home');
+    Route::post('/editPassword/{id}', [AuthController::class, 'gantiPassword'])->name('update_password');
     Route::get('/bayi', function () {
         return view('user.bayi');
     });
@@ -61,9 +74,7 @@ Route::group(['prefix' => 'user', 'middleware' => [
     Route::get('/editProfil', function () {
         return view('user.editProfil');
     });
-    Route::get('/dataBayi', function () {
-        return view('user.dataBayi');
-    });
+    Route::get('/dataBayi/{id}', [OrangTuaController::class, 'dataBayi'])->name('user.dataBayi');
     Route::get('/akunsaya', function () {
         return view('user.akunSaya');
     });
@@ -90,7 +101,27 @@ Route::group(['prefix' => 'kader', 'middleware' => [
     'verified',
 ]], function () {
     Route::get('/dashboard', function () {
-        return view('admin.dashboard');
+        $jumlahBayiStunting = Bayi::whereHas('kesehatanBayi', function ($query) {
+            $query->where('status', 'stunting')
+                ->where('id', function ($subquery) {
+                    $subquery->from('kesehatanbayi')
+                        ->select('id')
+                        ->whereRaw('bayi.id = kesehatanbayi.bayi_id')
+                        ->orderBy('id', 'desc')
+                        ->limit(1);
+                });
+        })->count();
+        $jumlahBayiNormal = Bayi::whereHas('kesehatanBayi', function ($query) {
+            $query->where('status', 'normal')
+                ->where('id', function ($subquery) {
+                    $subquery->from('kesehatanbayi')
+                        ->select('id')
+                        ->whereRaw('bayi.id = kesehatanbayi.bayi_id')
+                        ->orderBy('id', 'desc')
+                        ->limit(1);
+                });
+        })->count();
+        return view('admin.dashboard',compact('jumlahBayiStunting','jumlahBayiNormal'));
     })->name('admin.dashboard');
     Route::get('/kalender', [KalenderController::class, 'index'])->name('kalender');
     Route::get('/tambahData', [BayiController::class, 'tambahDataBayi'])->name('tambahData.view');

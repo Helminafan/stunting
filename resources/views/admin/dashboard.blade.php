@@ -25,14 +25,14 @@
         <div class="bg-white  p-4 rounded-xl shadow-xl">
             <h1 class="text-[14px]">Jumlah Anak</h1>
             <div class="flex">
-                <h1 class="text-[30px]">{{DB::table('bayi')->count()}}</h1>
+                <h1 class="text-[30px]">{{ DB::table('bayi')->count() }}</h1>
                 <img src="{{ asset('kader/foto/bayi.png') }}" alt="">
             </div>
         </div>
         <div class="bg-white p-4 rounded-xl shadow-2xl">
             <h1 class="text-[14px]">Jumlah Stunting</h1>
             <div class="flex">
-                <h1 class="text-[30px]">203</h1>
+                <h1 class="text-[30px]">{{$jumlahBayiStunting}}</h1>
                 <img src="{{ asset('kader/foto/bayi.png') }}" alt="">
             </div>
         </div>
@@ -49,15 +49,48 @@
             <canvas id="myPieChart" class="h-24 mb-3"></canvas>
             <div class="flex text-[12px] justify-center">
                 <span class="mr-2">
-                    <i class="fas fa-circle text-blue-700"></i> Direct
+                    <i class="fas fa-circle text-blue-700"></i> Bayi Stunting
                 </span>
                 <span class="mr-2">
-                    <i class="fas fa-circle text-blue-500"></i> Social
-                </span>
-                <span class="mr-2">
-                    <i class="fas fa-circle text-green-600"></i> Referral
+                    <i class="fas fa-circle text-green-600"></i> Bayi Normal
                 </span>
             </div>
         </div>
     </div>
 @endsection
+@push('js')
+    <script>
+        var ctx = document.getElementById("myPieChart");
+        var jumlahBayiStunting = <?php echo json_encode($jumlahBayiStunting); ?>;
+        var jumlahBayiNormal = <?php echo json_encode($jumlahBayiNormal); ?>;
+        var myPieChart = new Chart(ctx, {
+            type: 'doughnut',
+            data: {
+                labels: ["jumlah Bayi Normal", "jumlah Bayi Stunting"],
+                datasets: [{
+                    data: [jumlahBayiNormal, jumlahBayiStunting],
+                    backgroundColor: ['#1cc88a','#4e73df'],
+                    hoverBackgroundColor: ['#2e59d9', '#17a673', '#2c9faf'],
+                    hoverBorderColor: "rgba(234, 236, 244, 1)",
+                }],
+            },
+            options: {
+                maintainAspectRatio: false,
+                tooltips: {
+                    backgroundColor: "rgb(255,255,255)",
+                    bodyFontColor: "#858796",
+                    borderColor: '#dddfeb',
+                    borderWidth: 1,
+                    xPadding: 15,
+                    yPadding: 15,
+                    displayColors: false,
+                    caretPadding: 10,
+                },
+                legend: {
+                    display: false
+                },
+                cutoutPercentage: 80,
+            },
+        });
+    </script>
+@endpush

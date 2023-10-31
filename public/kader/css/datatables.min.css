@@ -1,0 +1,9 @@
+.list {
+    list-style: none;
+    padding: 5px;
+    border: 1px solid;
+}
+.active {
+    background-color: #D981B4;
+    color: white;
+}

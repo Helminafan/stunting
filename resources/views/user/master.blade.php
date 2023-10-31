@@ -11,6 +11,8 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     @vite('resources/css/app.css')
     <link rel="stylesheet" href="{{asset('kader/css/style.css')}}">
+    <link rel="stylesheet" href="{{ asset('kader/css/datatables.min.css') }}">
+
 </head>
 
 <body class=" bg-[#F2F2F2]">

@@ -14,4 +14,7 @@ class Bayi extends Model
     public function ibuBayi(){
         return $this->hasMany(Ibu::class, 'id','ibu_id');
     }
+    public function kesehatanBayi(){
+        return $this->hasMany(KesehatanBayi::class,'bayi_id','id');
+    }
 }

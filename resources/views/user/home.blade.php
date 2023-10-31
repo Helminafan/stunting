@@ -5,6 +5,7 @@
     </div>
     <div class="card">
         @foreach ($data as $item => $row)
+        <a href="{{route('user.dataBayi',$row->id)}}">
             <div class="bg-white rounded-xl mb-4 shadow-xl py-3 mx-6 w-[300px] ">
                 <div class="flex justify-between  items-center text-slate-500  mb-1 px-5 ">
                     <div class="flex items-center">
@@ -38,14 +39,11 @@
                     </div>
                 </div>
             </div>
+        </a>
         @endforeach
 
     </div>
-    <div class="font-semibold mt-5 mb-4 mx-6">
-        <h1>
-            Chart
-        </h1>
-    </div>
+   
    
 @endsection
 
