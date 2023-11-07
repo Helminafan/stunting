@@ -172,12 +172,12 @@
     }
 
     .version {
-    position: absolute; /* Mengatur posisi absolut */
-    bottom: 10px; /* Mengatur jarak dari bawah */
-    left: 50%; /* Mengatur ke tengah horizontal */
-    transform: translateX(-50%); /* Untuk menggeser teks agar tepat di tengah */
-    font-size: 16px; /* Ukuran font */
-    color: #fff; /* Warna teks */
+    position: absolute; 
+    bottom: 10px; 
+    left: 50%;
+    transform: translateX(-50%); 
+    font-size: 16px; 
+    color: #fff; 
     }
 </style>
 <body class="backg-gradient">
