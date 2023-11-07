@@ -148,11 +148,50 @@
         margin-top: 30px;
         text-align: center;
     }
+
+    .splash {
+    position: fixed;
+    background: linear-gradient(90deg, #D981B4, #865BF4);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    }
+
+    .splash-content {
+    text-align: center;
+    color: #fff;
+    }
+
+    .content {
+    display: none;
+    transition: opacity 0.5s;
+    opacity: 0;
+    }
+
+    .version {
+    position: absolute; /* Mengatur posisi absolut */
+    bottom: 10px; /* Mengatur jarak dari bawah */
+    left: 50%; /* Mengatur ke tengah horizontal */
+    transform: translateX(-50%); /* Untuk menggeser teks agar tepat di tengah */
+    font-size: 16px; /* Ukuran font */
+    color: #fff; /* Warna teks */
+    }
 </style>
 <body class="backg-gradient">
+    <div id="splash-screen" class="splash">
+        <div class="splash-content">
+            <img class="img-splash" src="{{ asset('kader/foto/logo-nosting.png') }}" alt="" style="height: 240px"; width="210px";>
+            <div class="version">
+                <p>by Poliwangi</p>
+            </div>
+        </div>
+    </div>
     <div class="container">
         <div class="forms">
-            <div class="form login">
+            <div class="form login content" id="content">
                 <span class="title">Masuk</span>
                 <form method="POST" action="{{ route('login') }}">
                     @csrf
@@ -176,4 +215,22 @@
     </div>
 </div>
 </body>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        setTimeout(function () {
+            const splashScreen = document.getElementById("splash-screen");
+            const content = document.getElementById("content");
+    
+            // Hide the splash screen and show the main content
+            splashScreen.style.display = "none";
+            content.style.display = "block";
+    
+            // Add a fade-in effect to the main content
+            setTimeout(function () {
+                content.style.opacity = 1;
+            }, 10);
+        }, 3000); // You can adjust the time (in milliseconds) for how long the splash screen is displayed.
+    });
+    
+    </script>
 </html>
