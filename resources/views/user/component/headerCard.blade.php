@@ -10,9 +10,24 @@
 
     <div class="bg-white rounded-3xl shadow-xl absolute -bottom-5 w-[300px] left-1/2 -translate-x-1/2">
         <div class="flex items-center px-5 py-3">
-            <h2 class="font-bold text-lg">09.30</h2>
+            <h2 class="font-bold text-lg" id="clock"></h2>
+            <script>
+                setInterval(customClock, 500);
+                function customClock() {
+                    var time = new Date();
+                    var hrs = time.getHours();
+                    var min = time.getMinutes();
+                    
+                    document.getElementById('clock').innerHTML = hrs + ":" + min;
+                    
+                }
+            </script>
             <div class="ml-2">
-                <p class="text-xs font-semibold">12 Agustus 2023</p>
+                <p class="text-xs font-semibold">
+                    <?php
+                        echo date('d F Y');
+                    ?>
+                </p>
                 <p class="text-[10px] font-semibold">Jl. Jendral Sudirman, kel. Sidorejo, Kec. Ro...</p>
             </div>
         </div>
