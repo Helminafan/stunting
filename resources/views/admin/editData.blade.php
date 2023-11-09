@@ -103,3 +103,51 @@
         </div>
     </div>
 @endsection
+@push('js')
+    <script>
+        $('#bayi').validate({
+            rules: {
+                'nikBayi': {
+                    required: true,
+                },
+                'namaBayi': {
+                    required: true,
+                },
+                'tglLahirBayi': {
+                    required: true,
+                },
+                'tmptLahirBayi': {
+                    required: true,
+                },
+              
+                'jenisKelamin': {
+                    required: true,
+                },
+                'ibu_id': {
+                    required: true,
+                },
+            },
+            // messages: {
+            //     'nik[]': {
+            //         required: "No KK tidak boleh kosong",
+            //         number: "data harus berupa angka",
+            //         minlength: "inputan harus berjumlah 16",
+
+            //     },
+            //     'nama_warga[]': {
+            //         required: "nama lengkap tidak boleh kosong",
+            //     },
+            //     'alamat[]': {
+            //         required: "Alamat tidak boleh kosong",
+            //     },
+            //     'no_hp[]': {
+            //         required: "No HP tidak boleh kosong",
+            //         number: "data harus berupa angka",
+            //     },
+            //     'foto_ktp[]': {
+            //         required: "File Harus Ditambahkan",
+            //     },
+            // },
+        });
+    </script>
+@endpush
