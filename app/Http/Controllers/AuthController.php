@@ -29,4 +29,13 @@ class AuthController extends Controller
         $data->update();
         return redirect()->route('user.home');
     }
+    public function gantiTelp(Request $request, string $id)
+    {
+        
+        $data = User::find($id);
+        $data->password = $request->email;
+        $data->password = $request->telp;
+        $data->update();
+        return redirect()->route('user.home');
+    }
 }

@@ -1,10 +1,10 @@
 <div class="h-28 bg-[#D981B4] rounded-b-[30px] relative">
     <div class="flex justify-between items-center mx-6 pt-4">
         <div class="text-white">
-            <h1 class="font-medium text-lg">Hi' Lusi Andeeni</h1>
+            <h1 class="font-medium text-lg">Hi' {{Auth::user()->dataIbu->nama}}</h1>
         </div>
         <div class="bg-red-500 bg-cover w-12 h-12 mr-2 rounded-[500px]"
-            style="background-image: url({{ asset('kader/foto/helmi.jpg') }});">
+            style="background-image: url({{ asset('storage/'.Auth::user()->profile_photo_path) }});">
         </div>
     </div>
 
@@ -28,7 +28,7 @@
                         echo date('d F Y');
                     ?>
                 </p>
-                <p class="text-[10px] font-semibold">Jl. Jendral Sudirman, kel. Sidorejo, Kec. Ro...</p>
+                <p class="text-[10px] font-semibold">{{Auth::user()->address}}</p>
             </div>
         </div>
     </div>

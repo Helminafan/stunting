@@ -11,6 +11,9 @@ use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Storage;
+
 
 class OrangTuaController extends Controller
 {
@@ -55,7 +58,7 @@ class OrangTuaController extends Controller
     }
     public function homeDashboard()
     {
-        $user = Auth::user();
+        $user = Auth::user(); 
         $ibuId = $user->dataIbu->id;
         $data = Bayi::with('ibuBayi')
             ->where('ibu_id', $ibuId)
@@ -71,7 +74,7 @@ class OrangTuaController extends Controller
                     $selisihBulan[] = '';
                 }
             }
-        return view('user.home', compact('data','selisihBulan'));
+        return view('user.home', compact('user','data','selisihBulan'));
     }
     public function dataBayi($id){
         $detailBayi = Bayi::find($id);
@@ -109,5 +112,16 @@ class OrangTuaController extends Controller
             // Handle ketika data bayi tidak ditemukan, misalnya dengan menampilkan pesan kesalahan.
             return redirect()->route('dashboard')->with('error', 'Data bayi tidak ditemukan.');
         }
+    }
+    public function ganti_Foto(Request $request, string $id)
+    {
+        $data = User::find($id);
+        if ($request->hasFile('inputGambar')) {
+            Storage::delete($data->profile_photo_path);
+            $photo_Profil = $request->file('inputGambar')->store('inputGambar');
+            $data->profile_photo_path = $photo_Profil;
+        }
+        $data->update();
+        return redirect()->route('edit_profile');
     }
 }

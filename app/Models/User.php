@@ -63,6 +63,5 @@ class User extends Authenticatable
     public function dataIbu()
     {
         return $this->hasOne(Ibu::class, 'user_id');
-       
     }
 }

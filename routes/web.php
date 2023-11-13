@@ -56,6 +56,7 @@ Route::group(['prefix' => 'user', 'middleware' => [
 ]], function () {
     Route::get('/home', [OrangTuaController::class, 'homeDashboard'])->name('user.home');
     Route::post('/editPassword/{id}', [AuthController::class, 'gantiPassword'])->name('update_password');
+    Route::post('/updateTelp/{id}', [AuthController::class, 'gantiTelp'])->name('update_telp');
     Route::get('/bayi', function () {
         return view('user.bayi');
     });
@@ -77,7 +78,7 @@ Route::group(['prefix' => 'user', 'middleware' => [
     Route::get('/dataBayi/{id}', [OrangTuaController::class, 'dataBayi'])->name('user.dataBayi');
     Route::get('/akunsaya', function () {
         return view('user.akunSaya');
-    });
+    })->name('edit_profile');
     Route::get('/notif', function () {
         return view('user.notifikasiView');
     });
@@ -90,6 +91,7 @@ Route::group(['prefix' => 'user', 'middleware' => [
     Route::get('/akunsaya/editprofil', function () {
         return view('user.editprofil');
     });
+    Route::post('/update_profil/{id}', [OrangTuaController::class,'ganti_Foto'])->name('update_foto');
     Route::get('/akunsaya/gantipass/{id}', function () {
         return view('user.gantipassword');
     });

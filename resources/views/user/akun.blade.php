@@ -10,7 +10,7 @@
         <div class="bg-white rounded-3xl shadow-xl absolute -bottom-7 w-[250px] left-1/2 -translate-x-1/2">
             <div class="flex items-center px-5 py-3">
                 <div class="bg-red-500 bg-cover w-12 h-12 mr-2 rounded-[500px]"
-                    style="background-image: url({{ asset('kader/foto/helmi.jpg') }});"></div>
+                    style="background-image: url({{ asset('storage/'.Auth::user()->profile_photo_path) }});"></div>
                 <div>
                     <h2 class="font-bold text-xs">Lusi Andeeni</h2>
                     <h2 class="font-extralight text-xs">Posyandu mawar 5</h2>
