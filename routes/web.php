@@ -137,9 +137,7 @@ Route::group(['prefix' => 'kader', 'middleware' => [
     Route::get('/akun', function () {
         return view('admin.akun');
     });
-    Route::get('/editData', function () {
-        return view('admin.editData');
-    });
+
     Route::get('/dataKesehatanAnak', function () {
         return view('admin.dataKesehatanAnak');
     });

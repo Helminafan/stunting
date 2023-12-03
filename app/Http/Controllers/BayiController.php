@@ -52,7 +52,7 @@ class BayiController extends Controller
     {
         $data = Bayi::find($id);
         $dataIbu = Ibu::all();
-        return view('admin.editdata', compact('data', 'dataIbu'));
+        return view('admin.editData', compact('data', 'dataIbu'));
     }
 
     // function for update "data bayi"
