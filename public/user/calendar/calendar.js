@@ -41,7 +41,7 @@ const eventsArr = [
   
 ];
 
-const enpoint = "http://127.0.0.1:8000/kader/getKalender";
+const enpoint = "https://nosting.id/kader/getKalender";
 fetch(enpoint)
     .then(response => response.json())
     .then(data => {

@@ -24,7 +24,6 @@ function hitungBeratBadan(beratBadan, usiaAnak, jenisKelamin, callback) {
         .then((response) => response.json())
         .then((combinedData) => {
             var $zScore;
-
             if (jenisKelamin === "cowok") {
                 const bbBoysData = combinedData.bbboys;
                 if (bbBoysData[usiaAnak]) {
