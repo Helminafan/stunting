@@ -93,8 +93,7 @@
                     {{-- tab name "Hasil Penimbangan" --}}
                     <div class="card bg-[#D981B4] mt-4 py-5 rounded-xl mx-8">
                         <h1 class="font-bold text-center mb-3 text-white">Kalkulator Penimbangan</h1>
-                        <form class="bayi" method="POST" action="{{ route('kesehatanBayi.store') }}"
-                            enctype="multipart/form-data">
+                        <form class="bayi" method="POST" action="{{ route('kesehatanBayi.store') }}">
                             @csrf
                             {{-- input for "tinggi badan" type number --}}
                             <div class="mb-3 mx-3">
