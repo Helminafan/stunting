@@ -18,7 +18,6 @@ return new class extends Migration
             $table->float('beratBadanBayi', 8, 2);
             $table->text('keterangan')->nullable();
             $table->string('status');
-            $table->text('hasil');
             $table->unsignedBigInteger('bayi_id');
             $table->foreign('bayi_id')->references('id')->on('bayi')->onDelete('cascade')->onUpdate('cascade');
             $table->timestamps();
