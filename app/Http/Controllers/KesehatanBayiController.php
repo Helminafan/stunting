@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Bayi;
 use App\Models\KesehatanBayi;
+use RealRashid\SweetAlert\Facades\Alert;
+use Illuminate\Console\View\Components\Alert as ComponentsAlert;
 
 class KesehatanBayiController extends Controller
 {
@@ -19,6 +21,7 @@ class KesehatanBayiController extends Controller
         $dataKesehatanBayi->hasil = $request->hasil;
         $dataKesehatanBayi->bayi_id = $request->bayi_id;
         $dataKesehatanBayi->save();
+        Alert::success('Sukses', 'Data berhasil tersimpan');
         return redirect()->route('dataBayi.view');
     }
 }

@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\Kalender;
 use Illuminate\Http\Request;
+use RealRashid\SweetAlert\Facades\Alert;
+use Illuminate\Console\View\Components\Alert as ComponentsAlert;
 
 class KalenderController extends Controller
 {
@@ -56,6 +58,7 @@ class KalenderController extends Controller
         $data->tempat = $request->tempat;
         $data->alamat = $request->alamat;
         $data->save();
+        Alert::success('Sukses', 'Jadwal berhasil dibuat');
         return redirect()->route('kalender');
     }
 
