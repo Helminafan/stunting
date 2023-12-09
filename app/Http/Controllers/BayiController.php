@@ -9,6 +9,8 @@ use App\Models\KesehatanBayi;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
 use Carbon\Carbon;
+use RealRashid\SweetAlert\Facades\Alert;
+use Illuminate\Console\View\Components\Alert as ComponentsAlert;
 
 class BayiController extends Controller
 {
@@ -44,6 +46,7 @@ class BayiController extends Controller
         $dataBayi->jenisKelamin = $request->jenisKelamin;
         $dataBayi->ibu_id = $request->ibu_id;
         $dataBayi->save();
+        Alert::success('Sukses', 'Data Bayi Berhasil Ditambahkan');
         return redirect()->route('dataBayi.view');
     }
 
@@ -66,6 +69,7 @@ class BayiController extends Controller
         $dataBayi->jenisKelamin = $request->jenisKelamin;
         $dataBayi->ibu_id = $request->ibu_id;
         $dataBayi->update();
+        Alert::success('Sukses', 'Data Bayi Berhasil Diubah');
         return redirect()->route('dataBayi.view');
     }
 

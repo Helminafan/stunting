@@ -13,6 +13,8 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Storage;
+use RealRashid\SweetAlert\Facades\Alert;
+use Illuminate\Console\View\Components\Alert as ComponentsAlert;
 
 
 class OrangTuaController extends Controller
@@ -54,6 +56,7 @@ class OrangTuaController extends Controller
         $updateData = User::find(Auth::user()->id);
         $updateData->ayah_complete = true;
         $updateData->update();
+        Alert::success('Sukses', 'Akun berhasil dibuat');
         return redirect()->route('dashboard');
     }
     public function homeDashboard()
