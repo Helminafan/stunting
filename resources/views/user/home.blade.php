@@ -6,7 +6,7 @@
     <div class="card">
         @foreach ($data as $item => $row)
         <a href="{{route('user.dataBayi',$row->id)}}">
-            <div class="bg-white rounded-xl mb-4 shadow-xl py-3 mx-6 w-[300px] ">
+            <div class="bg-white rounded-xl mb-4 shadow-xl py-3 mx-6 w-[420px] ">
                 <div class="flex justify-between  items-center text-slate-500  mb-1 px-5 ">
                     <div class="flex items-center">
                         <div class="bg-[#D981B4] bg-cover w-10 h-10 mr-2 rounded-[500px]"
