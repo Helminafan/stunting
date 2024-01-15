@@ -4,6 +4,9 @@
         <div class="container">
             <div class="navbar mb-7">
                 <div class="bg-[#D981B4] items-center px-4 py-3 text-white flex">
+                    <a href="{{ url('/user/akunsaya') }}">
+                        <i class="fa-solid fa-left-long mx-3"></i>
+                    </a>
                     <a href="{{url('user/home')}}">
                         <h1 class="font-semibold">Back</h1>
                     </a>

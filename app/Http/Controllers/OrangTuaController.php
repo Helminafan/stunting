@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Artikel;
 use App\Models\Ayah;
 use App\Models\Bayi;
 use App\Models\Ibu;
@@ -61,6 +62,7 @@ class OrangTuaController extends Controller
     }
     public function homeDashboard()
     {
+        $artikel = Artikel::all();
         $user = Auth::user(); 
         $ibuId = $user->dataIbu->id;
         $data = Bayi::with('ibuBayi','statusBayi')
@@ -78,7 +80,7 @@ class OrangTuaController extends Controller
                     $selisihBulan[] = '';
                 }
             }
-        return view('user.home', compact('user','data','selisihBulan'));
+        return view('user.home', compact('user','data','selisihBulan','artikel'));
     }
     public function dataBayi($id){
         $detailBayi = Bayi::find($id);
