@@ -10,6 +10,7 @@ use App\Models\Bayi;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Route;
 use Laravel\Jetstream\Rules\Role;
+use App\Http\Controllers\ArtikelController;
 
 /*
 |--------------------------------------------------------------------------
@@ -95,6 +96,7 @@ Route::group(['prefix' => 'user', 'middleware' => [
     Route::get('/akunsaya/gantipass/{id}', function () {
         return view('user.gantipassword');
     });
+    Route::get('/artikel/{id}', [ArtikelController::class, 'show'])->name('user.artikel');
 });
 
 Route::group(['prefix' => 'kader', 'middleware' => [
@@ -156,6 +158,8 @@ Route::group(['prefix' => 'kader', 'middleware' => [
     Route::get('/tambahJadwal', [KalenderController::class, 'create'])->name('tambahKalender');
     Route::post('/storeJadwal', [KalenderController::class, 'store'])->name('storeKalender');
     Route::get('/getKalender', [KalenderController::class, 'getKalender']);
+    Route::get('/tambahArtikel', [ArtikelController::class, 'create']);
+    Route::post('/storeArtikel', [ArtikelController::class, 'store'])->name('artikel.store');
 });
 
 Route::middleware([

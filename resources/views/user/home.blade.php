@@ -41,9 +41,25 @@
             </div>
         </a>
         @endforeach
-
     </div>
-   
+    <div class="font-semibold mt-10 mb-4 mx-6">
+        <h1>Artikel</h1>
+    </div>
+    <div class="card">
+        @foreach ($artikel as $item => $data)
+        <a href="{{route('user.artikel',$data->id)}}">
+            <div class="bg-white rounded-xl mb-4 shadow-xl py-3 mx-6 w-[420px] ">
+                <div class="flex justify-between  items-center text-black  mb-1 px-5 ">
+                    <div class="flex items-center">
+                        <div class=" bg-cover w-10 h-10 mr-2 rounded-[500px]"
+                            style="background-image: url({{ asset('kader/foto/logo-nosting.png') }});"></div>
+                        <h1 class="font-semibold text-lg">{{$data->judul}}</h1>
+                    </div>
+                </div>
+            </div>
+        </a>
+        @endforeach
+    </div>
    
 @endsection
 
