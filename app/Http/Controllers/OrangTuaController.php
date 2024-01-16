@@ -65,7 +65,7 @@ class OrangTuaController extends Controller
         $artikel = Artikel::all();
         $user = Auth::user(); 
         $ibuId = $user->dataIbu->id;
-        $data = Bayi::with('ibuBayi')
+        $data = Bayi::with('ibuBayi','statusBayi')
             ->where('ibu_id', $ibuId)
             ->get();
             $selisihBulan = [];
@@ -74,6 +74,7 @@ class OrangTuaController extends Controller
                     $tanggalLahir = Carbon::parse($bayi->tglLahirBayi);
                     $tanggalSekarang = Carbon::now();
                     $selisihBulan[] = $tanggalLahir->diffInMonths($tanggalSekarang);
+                    $bayi->kesehatanBayi()->latest()->first();
                 } else {
                     // Jika tglLahirBayi tidak tersedia
                     $selisihBulan[] = '';
