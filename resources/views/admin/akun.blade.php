@@ -42,13 +42,6 @@
             <i class="fa-solid fa-chevron-right"></i>
         </div>
     </a>
-        <a href="{{ url('/kader/tentang') }}">
-            <div class="flex items-center py-2 justify-between border-b-2 text-[#D981B4] px-6">
-                <i class="fa-solid fa-circle-info w-7"></i>
-                <h1 class="grow">Tentang</h1>
-                <i class="fa-solid fa-chevron-right"></i>
-            </div>
-        </a>
 
         <a href="{{ url('/kader/kepriv') }}">
             <div class="flex items-center py-2 justify-between border-b-2 text-[#D981B4] px-6">
