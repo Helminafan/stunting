@@ -89,7 +89,7 @@
                 <div class="flex justify-between  items-center text-black  mb-1 px-5 ">
                     <div class="flex items-center">
                         <div class=" bg-cover w-10 h-10 mr-2 rounded-[500px]"
-                            style="background-image: url({{ asset('kader/foto/logo-nosting.png') }});"></div>
+                            style="background-image: url({{ asset('storage/'.$data->image) }});"></div>
                         <h1 class="font-semibold text-lg">{{$data->judul}}</h1>
                     </div>
                 </div>

@@ -10,4 +10,9 @@ class Artikel extends Model
     use HasFactory;
     protected $table = 'artikel';
     protected $primaryKey = 'id';
+    protected $fillable = [
+        'judul',
+        'isi',
+        'image',
+    ];
 }
