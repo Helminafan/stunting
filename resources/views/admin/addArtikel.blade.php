@@ -40,6 +40,16 @@
                             class="block p-2.5 w-full text-sm text-grey bg-gray-50 rounded-lg border border-gray-300 focus:ring-[#865BF4] focus:border-[#865BF4] dark:bg-white dark:white dark:placeholder-gray-400 dark:text-grey dark:focus:ring-[#865BF4] dark:focus:border-[#865BF4]"
                             placeholder="Tulis Artikel" name="isi" required></textarea>
                     </div>
+
+                    <div class="mb-3 mx-3">
+                        <label for="image" class="block mb-2 text-sm font-medium text-white">Thumbnail Artikel</label>
+                        <div class="">
+                            <input type="file" id="image"
+                                class="bg-white border border-white  text-sm rounded-lg focus:ring-[#865BF4] focus:border-[#865BF4] block w-full p-2.5 dark:bg-white dark:border-white dark:text-black dark:focus:ring-[#865BF4] dark:focus:border-[#865BF4]"
+                                placeholder="Thumbnail Artikel" name="image" required>
+                        </div>
+                    </div>
+                    
                     <br>
                     {{-- button to save baby data --}}
                     <div class=" mx-3">

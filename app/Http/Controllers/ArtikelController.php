@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\StoreArticleRequest;
 use Illuminate\Http\Request;
 use App\Models\Artikel;
 use RealRashid\SweetAlert\Facades\Alert;
@@ -25,9 +26,13 @@ class ArtikelController extends Controller
         $addArtikel = new Artikel();
         $addArtikel->judul = $request->judul;
         $addArtikel->isi = $request->isi;
+        if ($request->hasFile('image')) {
+            $articleImage = $request->file('image')->store('image');
+            $addArtikel->image = $articleImage;
+        }
         $addArtikel->save();
         Alert::success('Sukses', 'Artikel Berhasil Dibuat');
-        return view('admin.dashboard');
+        return back();
     }
 
     /**
