@@ -35,6 +35,14 @@
         </div>
     </a>
 
+    <a href="#">
+        <div class="flex items-center py-2 justify-between border-b-2 text-[#D981B4] px-6">
+            <i class="fa-solid fa-user-group w-7"></i>
+            <h1 class="grow">Data Orang Tua</h1>
+            <i class="fa-solid fa-chevron-right"></i>
+        </div>
+    </a>
+
     <a href="{{ url('/kader/tentang') }}">
         <div class="flex items-center py-2 justify-between border-b-2 text-[#D981B4] px-6">
             <i class="fa-solid fa-circle-info w-7"></i>

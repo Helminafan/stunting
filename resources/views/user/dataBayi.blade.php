@@ -19,11 +19,13 @@
                             style="background-image: url({{ asset('kader/foto/baby.png') }});"></div>
                         <h2 class="font-medium text-xs">{{ $detailBayi->namaBayi }}</h2>
                     </div>
-                    @if ($detailBayi->statusBayi->status === 'normal')
-                        <h2 class="font-normal text-[9px] p-[5px] bg-[#5CEC18] text-white rounded"> Normal</h2>
-                    @else
-                        <h2 class="font-normal text-[9px] p-[5px] bg-[#ec1818] text-white rounded"> stunting</h2>
-                    @endif
+                    @if ($detailBayi->statusBayi)
+                            @if ($detailBayi->statusBayi->status === 'normal')
+                                <h2 class="font-normal text-[9px] p-[5px] bg-[#5CEC18] text-white rounded"> Normal</h2>
+                            @else
+                                <h2 class="font-normal text-[9px] p-[5px] bg-[#ec1818] text-white rounded"> stunting</h2>
+                            @endif    
+                        @endif
                 </div>
                 <hr class="mb-2">
                 <div class="px-7">
