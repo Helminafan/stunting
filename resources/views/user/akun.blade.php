@@ -28,22 +28,6 @@
             </div>
         </a>
 
-        <a href="{{ url('/user/dataKesehatanPribadi') }}">
-            <div class="flex items-center py-2 justify-between border-b-2 text-[#D981B4] px-6">
-                <i class="fa-solid fa-notes-medical w-7"></i>
-                <h1 class="grow">Data Kesehahatan Orang Tua</h1>
-                <i class="fa-solid fa-chevron-right"></i>
-            </div>
-        </a>
-
-        <a href="{{ url('/user/notif') }}">
-            <div class="flex items-center py-2 justify-between border-b-2 text-[#D981B4] px-6">
-                <i class="fa-solid fa-bell w-7"></i>
-                <h1 class="grow">Notifikasi</h1>
-                <i class="fa-solid fa-chevron-right"></i>
-            </div>
-        </a>
-
         <a href="{{ url('/user/kepriv') }}">
             <div class="flex items-center py-2 justify-between border-b-2 text-[#D981B4] px-6">
                 <i class="fa-solid fa-unlock-keyhole w-7"></i>
